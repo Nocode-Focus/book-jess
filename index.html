@@ -1,370 +1,1193 @@
 <!doctype html>
-<html lang="fr" data-lang="fr">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Book Jess Choby</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jessalynn Choby · Développeuse web & No-Code, Cheffe de projet digital</title>
+<meta name="description" content="Jessalynn Choby, développeuse web et no-code, cheffe de projet digital à Toulouse. Je cadre, développe et mets en production des outils digitaux fiables : WordPress, Bubble, Vue/Nuxt, automatisations Make.">
+<meta name="author" content="Jessalynn Choby">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#faf8f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121214" media="(prefers-color-scheme: dark)">
+<!-- A COMPLETER : remplacer https://A-COMPLETER.fr par le vrai domaine (canonical, og:url, og:image, JSON-LD) -->
+<link rel="canonical" href="https://A-COMPLETER.fr/">
+<meta property="og:type" content="profile">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="Jessalynn Choby · Développeuse web & No-Code, Cheffe de projet digital">
+<meta property="og:description" content="Je cadre, développe et mets en production des outils digitaux fiables, du besoin client à la mise en ligne.">
+<meta property="og:url" content="https://A-COMPLETER.fr/">
+<meta property="og:image" content="https://A-COMPLETER.fr/og-image.jpg">
+<meta property="profile:first_name" content="Jessalynn">
+<meta property="profile:last_name" content="Choby">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23c2410c'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='%23fff'%3EJC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400..700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jessalynn Choby",
+  "jobTitle": "Développeuse web & No-Code, Cheffe de projet digital",
+  "description": "Je cadre, développe et mets en production des outils digitaux fiables, du besoin client à la mise en ligne.",
+  "url": "https://A-COMPLETER.fr/",
+  "image": "https://A-COMPLETER.fr/photo-jessalynn-choby.jpg",
+  "address": { "@type": "PostalAddress", "addressLocality": "Toulouse", "addressCountry": "FR" },
+  "knowsLanguage": ["fr", "en", "de"],
+  "knowsAbout": ["Développement web front-end", "HTML", "CSS", "JavaScript", "React", "Vue.js", "Nuxt", "WordPress", "Bubble", "WeWeb", "Make", "Zapier", "n8n", "SEO technique", "Gestion de projet digital"],
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Université Jean Moulin Lyon 3" },
+  "sameAs": [
+    "https://www.linkedin.com/in/A-COMPLETER",
+    "https://github.com/A-COMPLETER"
+  ]
+}
+</script>
+
 <style>
-:root{--bg:#fbf8f6;--surface:#fff;--ink:#22202b;--muted:#6a6475;--line:#eadfdb;--accent:#c2416b;--accent-soft:#fbe8ee;--mark:#2f8f83;color-scheme:light}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171419;--surface:#211d24;--ink:#f1ecf2;--muted:#b3aab8;--line:#352e39;--accent:#f07aa0;--accent-soft:#3a2230;--mark:#5cc7b9;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#171419;--surface:#211d24;--ink:#f1ecf2;--muted:#b3aab8;--line:#352e39;--accent:#f07aa0;--accent-soft:#3a2230;--mark:#5cc7b9;color-scheme:dark}
-*{box-sizing:border-box}
-html[data-lang="fr"] [data-l="en"],html[data-lang="en"] [data-l="fr"]{display:none!important}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.wrap{max-width:1000px;margin:0 auto;padding:24px 16px 80px;display:flex;flex-direction:column;gap:64px}
-a{color:var(--accent)}
-.topbar{display:flex;justify-content:flex-end}
-.langbtn{font:inherit;font-size:.85rem;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
-.langbtn:hover{border-color:var(--accent);color:var(--accent)}
-.eyebrow{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
-h1{font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.05;margin:6px 0 10px;letter-spacing:-.02em}
-h2{font-size:1.6rem;margin:4px 0 0;letter-spacing:-.01em}
-h3{margin:0;font-size:1.08rem}
-.role{font-size:1.15rem;font-weight:600;color:var(--accent);margin:0}
-.pitch{max-width:44rem;color:var(--muted);font-size:1.05rem}
-.pitch mark{background:var(--accent-soft);color:var(--ink);padding:0 3px;border-radius:3px}
-.hero{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px;align-items:end}
-@media (max-width:760px){.hero{grid-template-columns:1fr}}
-.contact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;font-size:.93rem}
-.contact .lbl{display:inline-block;width:92px;color:var(--muted)}
-.todo{color:var(--muted);font-style:italic}
-.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
-.fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
-.fact b{display:block;font-size:1.9rem;color:var(--accent);line-height:1.1}
-.fact span{color:var(--muted);font-size:.92rem}
-.sechead{display:flex;flex-direction:column;gap:6px;margin-bottom:22px;max-width:44rem}
-.sechead p{margin:0;color:var(--muted)}
-.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.col{border-top:3px solid var(--accent);padding-top:12px}
-.col p{margin:8px 0 0;color:var(--muted)}
-.col ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
-.col li{margin:4px 0}
-.cases{display:flex;flex-direction:column;gap:16px}
-.case{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px}
-@media (max-width:700px){.case{grid-template-columns:1fr}}
-.case .side{display:flex;flex-direction:column;gap:4px}
-.case .client{font-weight:700;font-size:1.05rem}
-.case .when,.case .post{color:var(--muted);font-size:.9rem}
-.tag{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin:4px 4px 0 0}
-.case p{margin:6px 0 0;color:var(--muted)}
-.case p b{color:var(--ink);font-weight:600}
-.case .res{color:var(--ink);font-weight:600}
-.case.feat{border-color:var(--accent)}
-.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
-.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 10px;font-size:.85rem}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
-.panel ul{margin:0;padding-left:18px;color:var(--muted);columns:2;column-gap:28px}
-.panel li{margin:0 0 8px;break-inside:avoid}
-@media (max-width:700px){.panel ul{columns:1}}
-.timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;border-left:2px solid var(--line);padding-left:18px}
-.timeline li{position:relative}
-.timeline li::before{content:"";position:absolute;left:-25px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
-.timeline .y{font-weight:700;color:var(--accent);margin-right:8px}
-.timeline span.t{color:var(--muted)}
-.end{background:var(--accent);color:#fff;border-radius:18px;padding:28px 24px;display:flex;flex-direction:column;gap:10px}
-.end h2{color:#fff}.end a{color:#fff}.end p{margin:0}
-.note{font-size:.85rem;color:var(--muted)}
+/* ---------- Tokens ---------- */
+:root{
+  --bg:#faf8f5;
+  --surface:#ffffff;
+  --surface-2:#f3efe9;
+  --text:#18181d;
+  --muted:#55555f;
+  --line:#e5e0d8;
+  --accent:#c2410c;
+  --accent-hover:#9a3412;
+  --accent-ink:#ffffff;
+  --accent-soft:#fdebe1;
+  --ok:#15803d;
+  --todo-bg:#fff4c2;
+  --todo-text:#5c4300;
+  --shadow:0 1px 2px rgba(24,24,29,.04),0 8px 24px rgba(24,24,29,.06);
+  --radius:16px;
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#121214;
+    --surface:#1b1b1f;
+    --surface-2:#232328;
+    --text:#ededf0;
+    --muted:#a6a6b0;
+    --line:#2e2e35;
+    --accent:#ff8a4c;
+    --accent-hover:#ffa575;
+    --accent-ink:#1a0e07;
+    --accent-soft:#2b1a11;
+    --ok:#4ade80;
+    --todo-bg:#3a2f00;
+    --todo-text:#ffe08a;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+html:has(dialog[open]){overflow:hidden}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.65 var(--font-body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent-hover)}
+h1,h2,h3{font-family:var(--font-display);line-height:1.1;letter-spacing:-.02em;margin:0;font-weight:700}
+p{margin:0}
+ul,ol{margin:0;padding:0}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.container{width:100%;max-width:1120px;margin-inline:auto;padding-inline:20px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--accent);color:var(--accent-ink);padding:10px 16px;border-radius:8px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
+
+/* Emplacements à compléter : très visibles exprès */
+.todo{background:var(--todo-bg);color:var(--todo-text);border:1px dashed currentColor;border-radius:6px;padding:.05em .4em;font-size:.92em;font-style:normal;font-weight:500}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+.site-header.scrolled{border-bottom-color:var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;height:64px}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-family:var(--font-display);font-weight:700}
+.logo-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--accent);color:var(--accent-ink);font-size:.95rem}
+.logo-name{display:none}
+.header-actions{display:flex;align-items:center;gap:8px}
+.lang-btn,.menu-btn{font:600 .85rem/1 var(--font-body);color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:999px;height:38px;padding:0 14px;cursor:pointer}
+.lang-btn:hover,.menu-btn:hover{border-color:var(--accent);color:var(--accent)}
+.menu-btn{display:inline-flex;align-items:center;gap:8px}
+.menu-btn svg{width:18px;height:18px}
+.nav{position:absolute;left:0;right:0;top:64px;background:var(--bg);border-bottom:1px solid var(--line);display:none}
+.nav[data-open="true"]{display:block}
+.nav ul{list-style:none;display:flex;flex-direction:column;padding:8px 20px 16px}
+.nav a{display:block;padding:12px 0;color:var(--text);text-decoration:none;font-weight:500;border-bottom:1px solid var(--line)}
+.nav li:last-child a{border-bottom:0}
+.nav a:hover{color:var(--accent)}
+
+/* ---------- Buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 22px;border-radius:999px;font:600 1rem/1 var(--font-body);text-decoration:none;border:2px solid var(--accent);cursor:pointer;transition:transform .15s,background .15s,color .15s}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);color:var(--accent-ink)}
+.btn-ghost{background:transparent;color:var(--accent)}
+.btn-ghost:hover{background:var(--accent-soft);color:var(--accent)}
+.btn:active{transform:translateY(1px)}
+
+/* ---------- Hero ---------- */
+.hero{padding:40px 0 56px}
+.hero-grid{display:grid;gap:40px;align-items:center}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:600;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 10px}
+.status-dot{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 22%,transparent)}
+.hero-id{display:flex;align-items:center;gap:16px;margin:24px 0 18px}
+.avatar{flex:none;width:76px;height:76px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font:700 1.5rem/1 var(--font-display);border:2px dashed var(--accent);overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.hero h1{font-size:clamp(2.4rem,9vw,4.4rem);font-weight:800}
+.hero-role{font:600 clamp(1.1rem,3.6vw,1.45rem)/1.3 var(--font-display);color:var(--accent);margin-bottom:18px;letter-spacing:-.01em}
+.hero-pitch{font-size:clamp(1.08rem,2.6vw,1.25rem);color:var(--muted);max-width:36em}
+.hero-pitch strong{color:var(--text);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:24px;font-size:.9rem;color:var(--muted);list-style:none}
+.hero-meta li{display:inline-flex;align-items:center;gap:6px}
+.hero-meta svg{width:16px;height:16px;color:var(--accent);flex:none}
+
+/* Carte "projet" : illustre le double profil cadrage + code */
+.board{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:20px;max-width:440px;width:100%;justify-self:center}
+.board-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.board-title{font:700 1rem/1.2 var(--font-display)}
+.board-sub{font-size:.8rem;color:var(--muted)}
+.pill{font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);white-space:nowrap}
+.board-steps{list-style:none;display:grid;gap:8px}
+.board-steps li{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;background:var(--surface-2);font-size:.93rem;font-weight:500}
+.board-steps .ico{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--line)}
+.board-steps .done .ico{background:var(--ok);border-color:var(--ok)}
+.board-steps .done .ico::after{content:"";width:6px;height:10px;border:solid #fff;border-width:0 2px 2px 0;transform:translateY(-1px) rotate(45deg)}
+.board-steps .active{background:var(--accent-soft);outline:1px solid color-mix(in srgb,var(--accent) 40%,transparent)}
+.board-steps .active .ico{border-color:var(--accent);background:radial-gradient(circle,var(--accent) 0 4px,transparent 5px)}
+.board-steps .tag{margin-left:auto;font:500 .72rem/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--muted)}
+.board-code{margin-top:14px;padding:12px 14px;border-radius:12px;background:#18181d;color:#e7e7ea;font:500 .8rem/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;overflow:hidden;white-space:nowrap}
+.board-code .c-k{color:#ff8a4c}.board-code .c-s{color:#86efac}.board-code .c-m{color:#8b8b96}
+
+/* ---------- Stats ---------- */
+.stats{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.stat b{display:block;font:800 clamp(1.6rem,5vw,2.2rem)/1 var(--font-display);color:var(--accent);margin-bottom:6px;letter-spacing:-.02em}
+.stat span{font-size:.9rem;color:var(--muted);line-height:1.4;display:block}
+
+/* ---------- Sections ---------- */
+.section{padding:72px 0}
+.section-alt{background:var(--surface-2)}
+.section-head{max-width:46rem;margin-bottom:36px}
+.kicker{display:flex;align-items:center;gap:10px;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.kicker .num{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:0;color:var(--muted)}
+.kicker::after{content:"";height:1px;width:48px;background:currentColor;opacity:.5}
+.section h2{font-size:clamp(1.8rem,5vw,2.6rem)}
+.section-lead{margin-top:14px;color:var(--muted);font-size:1.08rem}
+
+/* À propos */
+.about-grid{display:grid;gap:32px}
+.about-text p{font-size:1.1rem;margin-bottom:14px}
+.about-text p:last-child{margin-bottom:0}
+.about-text strong{color:var(--accent);font-weight:600}
+.duo{display:grid;gap:12px;align-content:start}
+.duo-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.duo-card h3{font-size:1.1rem;margin-bottom:10px;display:flex;align-items:center;gap:10px}
+.duo-card h3 svg{width:22px;height:22px;color:var(--accent)}
+.duo-card ul{list-style:none;display:grid;gap:6px;color:var(--muted);font-size:.95rem}
+.duo-card li::before{content:"→ ";color:var(--accent);font-weight:700}
+
+/* Services */
+.cards{display:grid;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:12px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:color-mix(in srgb,var(--accent) 50%,var(--line))}
+.card-icon{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+.card-icon svg{width:22px;height:22px}
+.card h3{font-size:1.25rem}
+.card p{color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin-top:auto;padding-top:6px}
+.chip{font-size:.78rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--surface-2);color:var(--text);border:1px solid var(--line)}
+
+/* Méthode */
+.steps{list-style:none;display:grid;gap:14px;counter-reset:step}
+.step{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px 22px 76px;counter-increment:step}
+.step::before{content:counter(step,decimal-leading-zero);position:absolute;left:20px;top:20px;width:40px;height:40px;border-radius:12px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:700 .95rem/1 var(--font-display)}
+.step h3{font-size:1.15rem;margin-bottom:6px}
+.step p{color:var(--muted);font-size:.97rem}
+.step .deliv{display:inline-block;margin-top:10px;font-size:.8rem;font-weight:600;color:var(--text);background:var(--surface-2);border-radius:8px;padding:4px 10px}
+
+/* Projets */
+.projects{display:grid;gap:20px}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s,border-color .2s}
+.project:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.thumb{position:relative;aspect-ratio:16/10;background:linear-gradient(135deg,var(--accent-soft),var(--surface-2));display:grid;place-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb-mono{font:800 clamp(2.4rem,8vw,3.4rem)/1 var(--font-display);color:color-mix(in srgb,var(--accent) 55%,transparent);letter-spacing:-.04em}
+.thumb .todo{position:absolute;left:12px;bottom:12px;font-size:.75rem}
+.thumb .flag{position:absolute;right:12px;top:12px;font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:999px;background:var(--surface);color:var(--text);border:1px solid var(--line)}
+.project-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.project-kind{font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.project h3{font-size:1.3rem}
+.project p{color:var(--muted);font-size:.97rem}
+.project .chips{margin-top:4px}
+.project-open{margin-top:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:6px;font:600 .95rem/1 var(--font-body);color:var(--accent);background:none;border:0;padding:10px 0 0;cursor:pointer}
+.project-open svg{width:18px;height:18px;transition:transform .2s}
+.project-open:hover svg{transform:translateX(3px)}
+
+/* Étude de cas (dialog) */
+dialog.case{width:min(760px,calc(100% - 24px));max-height:calc(100dvh - 24px);padding:0;border:1px solid var(--line);border-radius:20px;background:var(--surface);color:var(--text);box-shadow:0 24px 60px rgba(0,0,0,.3)}
+dialog.case::backdrop{background:rgba(10,10,12,.6);backdrop-filter:blur(3px)}
+.case-inner{padding:24px 20px 28px}
+.case-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}
+.case-top h3{font-size:clamp(1.4rem,4.5vw,1.9rem);margin-top:6px}
+.close-btn{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface-2);color:var(--text);cursor:pointer;display:grid;place-items:center}
+.close-btn:hover{border-color:var(--accent);color:var(--accent)}
+.close-btn svg{width:18px;height:18px}
+.case dl{display:grid;gap:18px;margin:0}
+.case dt{font:700 .78rem/1 var(--font-body);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}
+.case dd{margin:0;color:var(--text)}
+.case dd p+p{margin-top:8px}
+.case dd ul{padding-left:1.1em;display:grid;gap:8px}
+.case dd .chips{margin-top:0}
+.case-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.case-shot{margin-top:6px;aspect-ratio:16/9;border-radius:12px;background:var(--surface-2);border:1px dashed var(--line);display:grid;place-items:center;padding:12px;text-align:center}
+
+/* Stack */
+.stack{display:grid;gap:14px}
+.stack-group{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+.stack-group h3{font-size:1.05rem;margin-bottom:4px}
+.stack-group p{font-size:.88rem;color:var(--muted);margin-bottom:12px}
+.stack-group .chips{margin-top:0}
+
+/* Parcours */
+.timeline{list-style:none;position:relative;display:grid;gap:22px;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-item{position:relative}
+.tl-item::before{content:"";position:absolute;left:-28px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl-when{font:700 .85rem/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--accent);margin-bottom:6px}
+.tl-item h3{font-size:1.15rem;margin-bottom:4px}
+.tl-item p{color:var(--muted);font-size:.97rem;max-width:44rem}
+.langs{display:flex;flex-wrap:wrap;gap:10px;margin-top:32px;list-style:none}
+.lang{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:600;font-size:.93rem}
+.lang abbr{text-decoration:none;font:700 .75rem/1 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--accent)}
+
+/* Contact */
+.contact-box{background:var(--text);color:var(--bg);border-radius:24px;padding:36px 22px;display:grid;gap:28px}
+.contact-box h2{color:var(--bg)}
+.contact-box .kicker{color:var(--accent)}
+.contact-box .section-lead{color:color-mix(in srgb,var(--bg) 75%,var(--text))}
+.contact-list{list-style:none;display:grid;gap:10px}
+.contact-list a,.contact-list .row{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;background:color-mix(in srgb,var(--bg) 8%,var(--text));color:var(--bg);text-decoration:none;font-weight:500;border:1px solid color-mix(in srgb,var(--bg) 14%,var(--text))}
+.contact-list a:hover{border-color:var(--accent)}
+.contact-list svg{width:20px;height:20px;color:var(--accent);flex:none}
+.contact-list small{display:block;font-size:.78rem;opacity:.7;font-weight:400}
+.contact-box .todo{font-size:.85em}
+.avail{display:grid;gap:8px;list-style:none;font-size:.95rem}
+.avail li{display:flex;gap:10px;align-items:flex-start}
+.avail li::before{content:"";flex:none;margin-top:.55em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
+
+/* Footer */
+.site-footer{padding:32px 0 40px;color:var(--muted);font-size:.88rem}
+.footer-inner{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center}
+
+/* ---------- Responsive (mobile first) ---------- */
+@media (min-width:560px){
+  .stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .cards{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .stack{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .case-inner{padding:32px 32px 36px}
+}
+@media (min-width:760px){
+  .projects{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about-grid{grid-template-columns:1.3fr 1fr;gap:48px}
+  .contact-box{padding:48px;grid-template-columns:1.1fr 1fr;align-items:start}
+  .case dl{grid-template-columns:150px 1fr;gap:20px 24px}
+  .case dt{margin:4px 0 0}
+  .logo-name{display:inline}
+}
+@media (min-width:960px){
+  .container{padding-inline:32px}
+  .hero{padding:72px 0 80px}
+  .hero-grid{grid-template-columns:1.25fr 1fr;gap:56px}
+  .section{padding:104px 0}
+  .menu-btn{display:none}
+  .nav{position:static;display:block;background:none;border:0}
+  .nav ul{flex-direction:row;gap:4px;padding:0}
+  .nav a{border:0;padding:8px 10px;font-size:.92rem;border-radius:8px}
+  .nav a:hover{background:var(--surface-2)}
+  .projects{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .stack{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .step{padding:76px 20px 22px}
+  .timeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 40px;padding-left:0}
+  .timeline::before{display:none}
+  .tl-item{padding-left:28px;border-left:2px solid var(--line)}
+  .tl-item::before{left:-9px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+@media print{
+  .site-header,.hero-cta,.project-open,dialog{display:none!important}
+}
 </style>
 </head>
+
 <body>
-<div class="wrap">
+<a class="skip" href="#main" data-i18n="ui.skip">Aller au contenu</a>
 
-<div class="topbar"><button class="langbtn" id="langbtn" type="button" aria-label="Changer de langue / Switch language">EN</button></div>
-
-<header class="hero">
-  <div>
-    <span class="eyebrow" data-l="fr">Book · Toulouse</span>
-    <span class="eyebrow" data-l="en">Portfolio · Toulouse, France</span>
-    <h1>Jess Choby</h1>
-    <p class="role" data-l="fr">Webmaster · Développeuse web · No-code et IA</p>
-    <p class="role" data-l="en">Webmaster · Web developer · No-code and AI</p>
-    <p class="pitch" data-l="fr">Je conçois, je développe et je fais vivre des outils web pour des structures qui n'ont pas d'équipe tech : <mark>sites, espaces membres, outils internes, automatisations et communication</mark>. Formée au développement web, je produis aujourd'hui avec le no-code et l'IA. Enseignante depuis dix ans, j'anime des groupes de 5 à 50 personnes et je travaille couramment en anglais : je sais expliquer les outils aussi bien que les construire.</p>
-    <p class="pitch" data-l="en">I design, build and run web tools for organisations that have no tech team: <mark>websites, member areas, internal tools, automations and communication</mark>. Trained in web development, I now build with no-code and AI tools. A teacher for ten years, I lead groups of 5 to 50 people and work fluently in English: I can explain tools as well as I can build them.</p>
-  </div>
-  <div class="contact">
-    <div><span class="lbl">Email</span><span class="todo" data-l="fr">à compléter</span><span class="todo" data-l="en">to be added</span></div>
-    <div><span class="lbl">LinkedIn</span><span class="todo" data-l="fr">à compléter</span><span class="todo" data-l="en">to be added</span></div>
-    <div><span class="lbl">GitHub</span><span class="todo" data-l="fr">à compléter</span><span class="todo" data-l="en">to be added</span></div>
-    <div><span class="lbl" data-l="fr">Localisation</span><span class="lbl" data-l="en">Location</span><span data-l="fr">Toulouse, présentiel ou distanciel</span><span data-l="en">Toulouse, on site or remote</span></div>
-    <div><span class="lbl" data-l="fr">Langues</span><span class="lbl" data-l="en">Languages</span><span data-l="fr">Français, anglais professionnel courant, bases d'espagnol et d'allemand</span><span data-l="en">French, fluent professional English, basic Spanish and German</span></div>
+<!-- ================= HEADER ================= -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a class="logo" href="#top" aria-label="Jessalynn Choby, accueil" data-i18n-attr="aria-label:ui.home">
+      <span class="logo-mark" aria-hidden="true">JC</span>
+      <span class="logo-name">Jessalynn Choby</span>
+    </a>
+    <div class="header-actions">
+      <nav class="nav" id="nav" aria-label="Navigation principale" data-i18n-attr="aria-label:ui.navLabel">
+        <ul>
+          <li><a href="#a-propos" data-i18n="nav.about">À propos</a></li>
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#methode" data-i18n="nav.method">Méthode</a></li>
+          <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+          <li><a href="#stack" data-i18n="nav.stack">Stack</a></li>
+          <li><a href="#parcours" data-i18n="nav.path">Parcours</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="lang-btn" id="lang-btn" type="button" aria-label="Switch to English">EN</button>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span data-i18n="ui.menu">Menu</span>
+      </button>
+    </div>
   </div>
 </header>
 
-<section class="facts" aria-label="En bref">
-  <div class="fact"><b>2020</b><span data-l="fr">début de mon parcours web, du code au no-code puis à l'IA</span><span data-l="en">start of my web journey, from code to no-code to AI</span></div>
-  <div class="fact"><b>3</b><span data-l="fr">sites dont je suis responsable au quotidien, dont un entièrement en anglais</span><span data-l="en">websites I run day to day, one of them fully in English</span></div>
-  <div class="fact"><b>8</b><span data-l="fr">sites, applications et outils réalisés pour des clients, des associations et ma propre activité</span><span data-l="en">websites, apps and tools built for clients, non-profits and my own business</span></div>
-  <div class="fact"><b>10 <span data-l="fr">ans</span><span data-l="en">years</span></b><span data-l="fr">de pédagogie, en individuel et en ateliers de 5 à 50 personnes</span><span data-l="en">of teaching, one to one and in workshops of 5 to 50 people</span></div>
-</section>
+<main id="main">
 
-<section>
-  <div class="sechead">
-    <span class="eyebrow" data-l="fr">Ce que j'apporte</span><span class="eyebrow" data-l="en">What I bring</span>
-    <h2 data-l="fr">Une seule interlocutrice pour tout le numérique</h2><h2 data-l="en">One point of contact for everything digital</h2>
-  </div>
-  <div class="cols">
-    <div class="col">
-      <h3 data-l="fr">Créer</h3><h3 data-l="en">Build</h3>
-      <ul data-l="fr"><li>Sites vitrines, sites WordPress, sites sur mesure</li><li>Espaces membres et petites applications web</li><li>Outils de gestion sur mesure, en no-code ou en code</li></ul>
-      <ul data-l="en"><li>Showcase sites, WordPress and custom websites</li><li>Member areas and small web applications</li><li>Custom management tools, no-code or code</li></ul>
-    </div>
-    <div class="col">
-      <h3 data-l="fr">Faire vivre</h3><h3 data-l="en">Run</h3>
-      <ul data-l="fr"><li>Maintenance, mises à jour, refontes</li><li>Hébergement et mise en production</li><li>Communication et réseaux sociaux</li></ul>
-      <ul data-l="en"><li>Maintenance, updates, redesigns</li><li>Hosting and deployment</li><li>Communication and social media</li></ul>
-    </div>
-    <div class="col">
-      <h3 data-l="fr">Automatiser</h3><h3 data-l="en">Automate</h3>
-      <ul data-l="fr"><li>Développement assisté par IA</li><li>Automatisation de tâches et de processus</li><li>Outils internes créés à la demande</li></ul>
-      <ul data-l="en"><li>AI-assisted development</li><li>Task and process automation</li><li>Internal tools built on demand</li></ul>
-    </div>
-    <div class="col">
-      <h3 data-l="fr">Accompagner</h3><h3 data-l="en">Support</h3>
-      <ul data-l="fr"><li>Recueil des besoins et relation client</li><li>Former les utilisateurs, seuls ou en groupe</li><li>Travailler en anglais avec des équipes européennes</li></ul>
-      <ul data-l="en"><li>Needs analysis and client relations</li><li>Training users, one to one or in groups</li><li>Working in English with European teams</li></ul>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="sechead">
-    <span class="eyebrow" data-l="fr">Réalisations</span><span class="eyebrow" data-l="en">Work</span>
-    <h2 data-l="fr">Des projets réels, en ligne et utilisés</h2><h2 data-l="en">Real projects, live and in use</h2>
-    <p data-l="fr">Pour des clients, des associations et ma propre activité. À chaque fois, j'ai pris en charge le projet de bout en bout.</p>
-    <p data-l="en">For clients, non-profits and my own business. Each time, I handled the project from start to finish.</p>
-  </div>
-  <div class="cases">
-
-    <article class="case feat">
-      <div class="side">
-        <span class="client"><a href="https://www.donnerdelavoix.fr/" target="_blank" rel="noopener">Donner de la voix</a></span>
-        <span class="post" data-l="fr">Conception, design et développement</span><span class="post" data-l="en">Design and development</span>
-        <span class="when" data-l="fr">Mon activité · en cours</span><span class="when" data-l="en">My own business · ongoing</span>
-        <div><span class="tag" data-l="fr">Application web</span><span class="tag" data-l="en">Web app</span><span class="tag" data-l="fr">Espace élève</span><span class="tag" data-l="en">Student area</span><span class="tag">LMS</span><span class="tag" data-l="fr">Charte graphique</span><span class="tag" data-l="en">Visual identity</span></div>
-      </div>
+<!-- ================= HERO ================= -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container">
+    <div class="hero-grid">
       <div>
-        <h3 data-l="fr">Un site et une plateforme de formation pour mon activité</h3>
-        <h3 data-l="en">A website and a learning platform for my business</h3>
-        <p data-l="fr"><b>Le besoin :</b> présenter mon activité d'enseignement du chant improvisé et gérer au quotidien mes élèves, mes contenus et mes parcours.</p>
-        <p data-l="en"><b>The need:</b> present my improvised singing teaching business and manage my students, content and learning paths day to day.</p>
-        <p data-l="fr"><b>Ce que j'ai fait :</b> j'ai conçu l'identité visuelle et la charte graphique, puis développé un site dynamique avec un espace élève. Cette petite application web gère les élèves, les contenus de formation, les parcours et les exercices.</p>
-        <p data-l="en"><b>What I did:</b> I designed the visual identity, then built a dynamic website with a student area. This small web app manages students, course content, learning paths and exercises.</p>
-        <p data-l="fr"><b>Avant :</b> j'avais construit sur Coda un outil de gestion complet pour piloter toute l'activité : élèves, cours, ressources pédagogiques, administratif et comptabilité. Quand le besoin a grandi, je suis passée du no-code au code.</p>
-        <p data-l="en"><b>Before that:</b> I had built a complete management tool on Coda to run the whole business: students, classes, teaching resources, admin and accounting. When the need grew, I moved from no-code to code.</p>
-        <p class="res" data-l="fr">Je suis à la fois la cliente, la designer, la développeuse et l'utilisatrice : je sais ce qu'un outil doit faire au quotidien.</p>
-        <p class="res" data-l="en">I am the client, the designer, the developer and the user: I know what a tool needs to do every day.</p>
-      </div>
-    </article>
+        <p class="status"><span class="status-dot" aria-hidden="true"></span><span data-i18n="hero.status">Disponible immédiatement · CDI ou freelance</span></p>
 
-    <article class="case">
-      <div class="side">
-        <span class="client"><a href="https://www.labastide.io/" target="_blank" rel="noopener">La Bastide</a></span>
-        <span class="post" data-l="fr">Développeuse no-code en alternance</span><span class="post" data-l="en">No-code developer, work-study</span>
-        <span class="when" data-l="fr">1 an</span><span class="when" data-l="en">1 year</span>
-        <div><span class="tag">Bubble</span><span class="tag" data-l="fr">Gestion de projet</span><span class="tag" data-l="en">Project management</span><span class="tag" data-l="fr">ESS</span><span class="tag" data-l="en">Social economy</span></div>
-      </div>
-      <div>
-        <h3 data-l="fr">Une application de parcours à défis, pilotée de bout en bout</h3>
-        <h3 data-l="en">A challenge-based journey app, managed end to end</h3>
-        <p data-l="fr"><b>Le contexte :</b> La Bastide développe des solutions no-code sur mesure pour des structures de l'économie sociale et solidaire. J'y ai développé plusieurs projets sur Bubble.</p>
-        <p data-l="en"><b>Context:</b> La Bastide builds custom no-code solutions for social and solidarity economy organisations. I developed several projects on Bubble there.</p>
-        <p data-l="fr"><b>Ce que j'ai fait :</b> pour une entreprise cliente qui propose aux entreprises des parcours avec des défis par étapes, j'ai eu la responsabilité complète de l'application : cadrage, pilotage, développement et déploiement, en lien direct avec le client.</p>
-        <p data-l="en"><b>What I did:</b> for a client offering companies step-by-step challenge journeys, I was fully in charge of the app: scoping, project management, development and deployment, working directly with the client.</p>
-        <p class="res" data-l="fr">Un projet client confié en autonomie dès l'alternance, avec la pleine confiance du client.</p>
-        <p class="res" data-l="en">A client project entrusted to me on my own during my work-study, with the client's full trust.</p>
-      </div>
-    </article>
+        <div class="hero-id">
+          <div class="avatar">
+            <!-- A COMPLETER : remplacer "JC" par la photo, ex. :
+            <img src="photo-jessalynn-choby.webp" width="152" height="152" alt="Portrait de Jessalynn Choby"> -->
+            <span aria-hidden="true">JC</span>
+          </div>
+          <span class="todo" data-i18n="todo.photo">Photo à fournir (carrée, 400 × 400 px, WebP)</span>
+        </div>
 
-    <article class="case">
-      <div class="side">
-        <span class="client"><a href="https://conseliapatrimoine.com/" target="_blank" rel="noopener">Conselia Patrimoine</a></span>
-        <span class="post" data-l="fr">Développeuse et relation client</span><span class="post" data-l="en">Developer and client contact</span>
-        <span class="when" data-l="fr">Avec NoCode Focus</span><span class="when" data-l="en">With NoCode Focus</span>
-        <div><span class="tag" data-l="fr">Site vitrine</span><span class="tag" data-l="en">Showcase site</span><span class="tag">HTML / CSS / JS</span><span class="tag">Vercel</span></div>
-      </div>
-      <div>
-        <h3 data-l="fr">Le site d'un cabinet de conseil en gestion de patrimoine</h3>
-        <h3 data-l="en">A website for a wealth management advisory firm</h3>
-        <p data-l="fr"><b>Le besoin :</b> un site professionnel qui inspire confiance, dans un secteur exigeant.</p>
-        <p data-l="en"><b>The need:</b> a professional website that inspires trust, in a demanding sector.</p>
-        <p data-l="fr"><b>Ce que j'ai fait :</b> en collaboration avec NoCode Focus, en tant que développeuse indépendante, j'ai développé le site, accompagné la cliente, intégré ses retours, assuré le support et mis en place l'hébergement sur Vercel.</p>
-        <p data-l="en"><b>What I did:</b> working with NoCode Focus as an independent developer, I built the site, guided the client, handled her feedback, provided support and set up hosting on Vercel.</p>
-        <p class="res" data-l="fr">Une prise en charge complète, de la production au support après la mise en ligne.</p>
-        <p class="res" data-l="en">Full ownership, from development to post-launch support.</p>
-      </div>
-    </article>
+        <h1 id="hero-title">Jessalynn Choby</h1>
+        <p class="hero-role" data-i18n="hero.role">Développeuse web &amp; No-Code, Cheffe de projet digital</p>
+        <p class="hero-pitch" data-i18n="hero.pitch">Je cadre, développe et mets en production des outils digitaux fiables, <strong>du besoin client à la mise en ligne</strong>. Un seul interlocuteur qui comprend votre métier et écrit le code.</p>
 
-    <article class="case">
-      <div class="side">
-        <span class="client"><a href="https://lecercleenchante.com/" target="_blank" rel="noopener">Le Cercle Enchanté</a></span>
-        <span class="post" data-l="fr">Webmaster et responsable communication</span><span class="post" data-l="en">Webmaster and communications lead</span>
-        <span class="when" data-l="fr">En cours</span><span class="when" data-l="en">Ongoing</span>
-        <div><span class="tag">WordPress</span><span class="tag" data-l="fr">Réseaux sociaux</span><span class="tag" data-l="en">Social media</span><span class="tag" data-l="fr">Refonte</span><span class="tag" data-l="en">Redesign</span></div>
-      </div>
-      <div>
-        <h3 data-l="fr">Le site et la communication d'un festival</h3>
-        <h3 data-l="en">Website and communication for a festival</h3>
-        <p data-l="fr"><b>Le contexte :</b> un festival de chant improvisé qui revient chaque année, porté par une structure sans équipe tech.</p>
-        <p data-l="en"><b>Context:</b> an annual improvised singing festival, run by an organisation with no tech team.</p>
-        <p data-l="fr"><b>Ce que j'ai fait :</b> je suis la référente numérique de la structure. J'ai refondu en partie le site WordPress, j'en assure la maintenance et je le mets à jour à chaque nouvelle édition. Je gère aussi la communication : animation d'Instagram, création et publication des contenus. J'étudie actuellement une migration vers Next.js pour rendre le site plus simple et plus rapide à maintenir.</p>
-        <p data-l="en"><b>What I did:</b> I am the organisation's go-to digital person. I partly redesigned the WordPress site, maintain it and update it for every new edition. I also run communication: Instagram, content creation and publishing. I am currently assessing a move to Next.js to make the site simpler and faster to maintain.</p>
-        <p class="res" data-l="fr">Un rôle durable, sur plusieurs éditions, qui réunit la technique et la communication.</p>
-        <p class="res" data-l="en">A long-term role across several editions, combining tech and communication.</p>
-      </div>
-    </article>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#projets" data-i18n="hero.cta1">Voir mes projets</a>
+          <a class="btn btn-ghost" href="#contact" data-i18n="hero.cta2">Me contacter</a>
+        </div>
 
-    <article class="case">
-      <div class="side">
-        <span class="client"><a href="https://thewellvocal.com/" target="_blank" rel="noopener">The Well</a></span>
-        <span class="post">Webmaster</span>
-        <span class="when" data-l="fr">Mission rémunérée en cours</span><span class="when" data-l="en">Ongoing paid role</span>
-        <div><span class="tag">WordPress</span><span class="tag" data-l="fr">Anglais</span><span class="tag" data-l="en">English</span><span class="tag" data-l="fr">International</span><span class="tag" data-l="en">International</span></div>
+        <ul class="hero-meta">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-i18n="hero.loc">Toulouse, mobile en France, remote possible</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><span data-i18n="hero.langs">Français, anglais, allemand</span></li>
+        </ul>
       </div>
-      <div>
-        <h3 data-l="fr">Webmaster d'une structure européenne</h3>
-        <h3 data-l="en">Webmaster for a European organisation</h3>
-        <p data-l="fr"><b>Le contexte :</b> un projet à l'échelle européenne, sans interlocuteur francophone.</p>
-        <p data-l="en"><b>Context:</b> a European-scale project with an international team.</p>
-        <p data-l="fr"><b>Ce que je fais :</b> je suis responsable de l'ensemble du site WordPress : gestion, évolutions, mises à jour de contenu et suivi au quotidien, en lien avec une équipe internationale à distance.</p>
-        <p data-l="en"><b>What I do:</b> I am in charge of the whole WordPress site: administration, improvements, content updates and day-to-day follow-up, working remotely with an international team.</p>
-        <p class="res" data-l="fr">Toute la mission se déroule en anglais.</p>
-        <p class="res" data-l="en">The entire role is carried out in English.</p>
+
+      <!-- Illustration : un projet suivi de bout en bout -->
+      <div class="board" aria-hidden="true">
+        <div class="board-head">
+          <div>
+            <p class="board-title" data-i18n="board.title">Votre projet digital</p>
+            <p class="board-sub" data-i18n="board.sub">Suivi de bout en bout</p>
+          </div>
+          <span class="pill" data-i18n="board.pill">En recette</span>
+        </div>
+        <ol class="board-steps">
+          <li class="done"><span class="ico"></span><span data-i18n="m1.t">Cadrage</span><span class="tag">brief.md</span></li>
+          <li class="done"><span class="ico"></span><span data-i18n="m2.t">Spécifications</span><span class="tag">specs.md</span></li>
+          <li class="done"><span class="ico"></span><span data-i18n="m3.t">Développement</span><span class="tag">main</span></li>
+          <li class="active"><span class="ico"></span><span data-i18n="m4.t">Recette</span><span class="tag">v1.0-rc</span></li>
+          <li><span class="ico"></span><span data-i18n="m5.t">Mise en production et suivi</span><span class="tag">prod</span></li>
+        </ol>
+        <div class="board-code"><span class="c-m">$</span> <span class="c-k">deploy</span> --env <span class="c-s">production</span> <span class="c-m">// ✓ ok</span></div>
       </div>
-    </article>
-
-    <article class="case">
-      <div class="side">
-        <span class="client" data-l="fr">Autres sites</span><span class="client" data-l="en">Other websites</span>
-        <span class="post" data-l="fr">Conception et développement</span><span class="post" data-l="en">Design and development</span>
-        <div><span class="tag">WordPress</span><span class="tag">SEO</span></div>
-      </div>
-      <div>
-        <h3 data-l="fr">Sites sur mesure pour des indépendantes</h3>
-        <h3 data-l="en">Custom websites for independent professionals</h3>
-        <p data-l="fr"><b>Site d'Hélène, chant improvisé :</b> site WordPress sur mesure, du recueil du besoin à la mise en ligne : structuration du site et des contenus, référencement naturel, développement et accompagnement de la cliente.</p>
-        <p data-l="en"><b>Hélène's website, improvised singing:</b> a custom WordPress site, from needs analysis to launch: site and content structure, SEO, development and client support.</p>
-        <p data-l="fr"><b>Site de Marie :</b> reprise d'un projet en cours et développement de toute une partie de son site WordPress.</p>
-        <p data-l="en"><b>Marie's website:</b> took over a project in progress and built a whole section of her WordPress site.</p>
-      </div>
-    </article>
-
-  </div>
-</section>
-
-<section>
-  <div class="sechead">
-    <span class="eyebrow" data-l="fr">IA et automatisation</span><span class="eyebrow" data-l="en">AI and automation</span>
-    <h2 data-l="fr">Produire plus vite, en sachant ce que je fais</h2><h2 data-l="en">Building faster, knowing what I'm doing</h2>
-    <p data-l="fr">Je suis de près l'évolution des outils d'IA et je les utilise au quotidien. Développer avec l'IA, c'est savoir formuler le besoin, découper le travail, vérifier ce qui est produit, corriger, déployer et maintenir. Ma base en code et mon expérience du no-code sont ce qui me permet de le faire correctement.</p>
-    <p data-l="en">I follow AI tools closely and use them every day. Building with AI means framing the need, breaking down the work, checking what is produced, fixing it, deploying and maintaining it. My coding background and no-code experience are what let me do this properly.</p>
-  </div>
-  <div class="cols">
-    <div class="col"><h3 data-l="fr">Développement assisté par IA</h3><h3 data-l="en">AI-assisted development</h3><p data-l="fr">Production de code avec Claude Code et Cursor, prototypage rapide.</p><p data-l="en">Building code with Claude Code and Cursor, rapid prototyping.</p></div>
-    <div class="col"><h3 data-l="fr">Automatisation</h3><h3 data-l="en">Automation</h3><p data-l="fr">Mise en place de processus automatisés et d'outils internes créés à la demande.</p><p data-l="en">Setting up automated processes and internal tools built on demand.</p></div>
-    <div class="col"><h3 data-l="fr">Mise en production</h3><h3 data-l="en">Deployment</h3><p data-l="fr">Hébergement et déploiement, notamment sur Vercel.</p><p data-l="en">Hosting and deployment, notably on Vercel.</p></div>
-  </div>
-</section>
-
-<section>
-  <div class="sechead">
-    <span class="eyebrow" data-l="fr">Profil hybride</span><span class="eyebrow" data-l="en">Hybrid profile</span>
-    <h2 data-l="fr">Construire les outils, et aider les gens à s'en servir</h2><h2 data-l="en">Building tools, and helping people use them</h2>
-    <p data-l="fr">En parallèle de la tech, j'enseigne le chant improvisé depuis dix ans. Ce métier m'a donné trois compétences que j'utilise dans tous mes projets.</p>
-    <p data-l="en">Alongside tech, I have taught improvised singing for ten years. This work gave me three skills I use in every project.</p>
-  </div>
-  <div class="cols">
-    <div class="col">
-      <h3 data-l="fr">Pédagogie et structuration</h3><h3 data-l="en">Teaching and structuring</h3>
-      <p data-l="fr">Je sais découper un système en règles logiques et en étapes pour le rendre accessible à quelqu'un qui part de zéro. Je conçois mes propres parcours de formation. La même compétence me sert à comprendre un besoin et à recueillir ce que les gens attendent vraiment.</p>
-      <p data-l="en">I can break a system down into logical rules and steps so a complete beginner can follow. I design my own learning paths. The same skill helps me understand a need and find out what people really expect.</p>
     </div>
-    <div class="col">
-      <h3 data-l="fr">Animation de groupes</h3><h3 data-l="en">Group facilitation</h3>
-      <p data-l="fr">J'anime depuis plusieurs années des ateliers collectifs de 5 à 50 personnes : faire participer tout le monde, transmettre en groupe, faire construire quelque chose ensemble.</p>
-      <p data-l="en">For several years I have run group workshops of 5 to 50 people: getting everyone involved, teaching a group, building something together.</p>
-    </div>
-    <div class="col">
-      <h3 data-l="fr">Langues et international</h3><h3 data-l="en">Languages and international work</h3>
-      <p data-l="fr">Master 2 en langues, anglais professionnel courant, bases d'espagnol et d'allemand. Je travaille déjà au quotidien en anglais avec une équipe européenne.</p>
-      <p data-l="en">Master's degree in languages, fluent professional English, basic Spanish and German. I already work in English every day with a European team.</p>
-    </div>
-  </div>
-  <div class="panel" style="margin-top:20px">
-    <p class="eyebrow" style="margin:0 0 12px" data-l="fr">Concrètement, je peux par exemple</p>
-    <p class="eyebrow" style="margin:0 0 12px" data-l="en">In practice, I can for example</p>
-    <ul data-l="fr">
-      <li>Animer une formation sur un outil pour un groupe de 20 personnes, en français ou en anglais</li>
-      <li>Former une équipe et ses bénévoles à un nouvel outil, et accompagner le changement</li>
-      <li>Animer des ateliers d'initiation à l'IA pour des équipes non techniques</li>
-      <li>Accueillir et former de nouveaux clients chez un éditeur de logiciel : démos, webinaires</li>
-      <li>Assurer le support et le suivi d'une clientèle européenne</li>
-      <li>Animer des ateliers de recueil des besoins avec les futurs utilisateurs</li>
-      <li>Faire le lien entre développeurs et équipes métier, en langage clair</li>
-      <li>Rédiger des tutoriels, une documentation ou une base de connaissances</li>
-      <li>Gérer un site multilingue et coordonner des partenaires de plusieurs pays</li>
-    </ul>
-    <ul data-l="en">
-      <li>Run a tool training session for a group of 20, in French or English</li>
-      <li>Train a team and its volunteers on a new tool, and support the change</li>
-      <li>Run introductory AI workshops for non-technical teams</li>
-      <li>Onboard and train new customers for a software company: demos, webinars</li>
-      <li>Provide support and follow-up for European customers</li>
-      <li>Run needs-gathering workshops with future users</li>
-      <li>Bridge developers and business teams, in plain language</li>
-      <li>Write tutorials, documentation or a knowledge base</li>
-      <li>Manage a multilingual website and coordinate partners across countries</li>
+
+    <ul class="stats" aria-label="Chiffres clés" data-i18n-attr="aria-label:stats.label">
+      <li class="stat"><b>10+</b><span data-i18n="stats.wp">sites WordPress livrés à des clients</span></li>
+      <li class="stat"><b>Bubble</b><span data-i18n="stats.bubble">applications métier en production</span></li>
+      <li class="stat"><b>3</b><span data-i18n="stats.langs">langues de travail : FR, EN, DE</span></li>
+      <li class="stat"><b>8 <span class="sr-only" data-i18n="stats.yearsSr">ans</span></b><span data-i18n="stats.years">ans à piloter le digital d'une structure, côté client</span></li>
     </ul>
   </div>
 </section>
 
-<section>
-  <div class="sechead">
-    <span class="eyebrow" data-l="fr">Compétences</span><span class="eyebrow" data-l="en">Skills</span>
-    <h2 data-l="fr">Outils et savoir-faire</h2><h2 data-l="en">Tools and know-how</h2>
-  </div>
-  <div class="cols">
-    <div class="col"><h3>Web</h3><div class="chips"><span class="chip">HTML / CSS</span><span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">WordPress</span><span class="chip">SEO</span></div></div>
-    <div class="col"><h3 data-l="fr">No-code et IA</h3><h3 data-l="en">No-code and AI</h3><div class="chips"><span class="chip">Bubble</span><span class="chip">Coda</span><span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip" data-l="fr">Automatisations</span><span class="chip" data-l="en">Automations</span><span class="chip">Vercel</span></div></div>
-    <div class="col"><h3 data-l="fr">Projet et communication</h3><h3 data-l="en">Projects and communication</h3><div class="chips"><span class="chip" data-l="fr">Recueil des besoins</span><span class="chip" data-l="en">Needs analysis</span><span class="chip" data-l="fr">Gestion de projet</span><span class="chip" data-l="en">Project management</span><span class="chip" data-l="fr">Relation client</span><span class="chip" data-l="en">Client relations</span><span class="chip" data-l="fr">Réseaux sociaux</span><span class="chip" data-l="en">Social media</span><span class="chip" data-l="fr">Identité visuelle</span><span class="chip" data-l="en">Visual identity</span></div></div>
-    <div class="col"><h3 data-l="fr">Transmission</h3><h3 data-l="en">Teaching</h3><div class="chips"><span class="chip" data-l="fr">Pédagogie</span><span class="chip" data-l="en">Teaching</span><span class="chip" data-l="fr">Formation</span><span class="chip" data-l="en">Training</span><span class="chip" data-l="fr">Animation d'ateliers</span><span class="chip" data-l="en">Workshop facilitation</span><span class="chip" data-l="fr">Anglais courant</span><span class="chip" data-l="en">Fluent English</span><span class="chip" data-l="fr">Espagnol, allemand (bases)</span><span class="chip" data-l="en">Spanish, German (basic)</span></div></div>
+<!-- ================= À PROPOS ================= -->
+<section class="section section-alt" id="a-propos" aria-labelledby="about-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker"><span class="num">01</span><span data-i18n="nav.about">À propos</span></p>
+      <h2 id="about-title" data-i18n="about.title">Je code et je pilote. Les deux, sur le même projet.</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p data-i18n="about.p1">Je suis <strong>développeuse et cheffe de projet digital</strong>. Je commence par comprendre votre besoin métier, puis je le traduis en spécifications claires et en planning réaliste.</p>
+        <p data-i18n="about.p2">Ensuite, je construis la solution avec l'outil adapté : WordPress, Bubble, Vue/Nuxt, React ou une automatisation Make. Je ne choisis pas la techno par habitude, mais selon votre budget, vos délais et ce que votre équipe saura maintenir.</p>
+        <p data-i18n="about.p3">Je mène la recette, la mise en production et je documente, pour que l'outil continue de tourner après la livraison. Vous gagnez un interlocuteur unique qui parle métier et technique, en français, en anglais ou en allemand.</p>
+      </div>
+      <div class="duo">
+        <div class="duo-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg><span data-i18n="duo.dev">Côté développement</span></h3>
+          <ul>
+            <li data-i18n="duo.dev1">Front-end HTML, CSS, JavaScript, React, Vue/Nuxt</li>
+            <li data-i18n="duo.dev2">Apps Bubble et WeWeb en production</li>
+            <li data-i18n="duo.dev3">Workflows Make, Zapier, n8n</li>
+            <li data-i18n="duo.dev4">Développement assisté par IA (Claude Code, Cursor)</li>
+          </ul>
+        </div>
+        <div class="duo-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="17" rx="2"/><path d="M9 3v3h6V3M8 11h8M8 15h5"/></svg><span data-i18n="duo.pm">Côté projet</span></h3>
+          <ul>
+            <li data-i18n="duo.pm1">Recueil et cadrage du besoin</li>
+            <li data-i18n="duo.pm2">Spécifications et découpage fonctionnel</li>
+            <li data-i18n="duo.pm3">Planning, suivi client, recette</li>
+            <li data-i18n="duo.pm4">Livraison et documentation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section>
-  <div class="sechead">
-    <span class="eyebrow" data-l="fr">Parcours</span><span class="eyebrow" data-l="en">Background</span>
-    <h2 data-l="fr">Du code au no-code, puis à l'IA</h2><h2 data-l="en">From code to no-code, then AI</h2>
-  </div>
-  <ol class="timeline">
-    <li><span class="y">2020</span><span class="t" data-l="fr">Je commence à me former au développement web en autonomie : HTML, CSS, JavaScript, premiers projets personnels.</span><span class="t" data-l="en">I start teaching myself web development: HTML, CSS, JavaScript, first personal projects.</span></li>
-    <li><span class="y">No-code</span><span class="t" data-l="fr">Je découvre Coda et construis l'outil de gestion de mon activité d'enseignement.</span><span class="t" data-l="en">I discover Coda and build the management tool for my teaching business.</span></li>
-    <li><span class="y">Full stack</span><span class="t" data-l="fr">Parcours full stack sur Codecademy : React en front-end, Node.js en back-end, projets en JavaScript et React.</span><span class="t" data-l="en">Full stack track on Codecademy: React front end, Node.js back end, JavaScript and React projects.</span></li>
-    <li><span class="y" data-l="fr">Titre DWWM</span><span class="y" data-l="en">Web developer degree</span><span class="t" data-l="fr">Formation avec Ottho (parcours Bubble) et un an d'alternance chez La Bastide.</span><span class="t" data-l="en">Training with Ottho (Bubble track) and a one-year work-study at La Bastide.</span></li>
-    <li><span class="y" data-l="fr">Aujourd'hui</span><span class="y" data-l="en">Today</span><span class="t" data-l="fr">Indépendante : sites vitrines, petites applications, référente tech de plusieurs structures, développement assisté par IA.</span><span class="t" data-l="en">Freelance: showcase sites, small apps, go-to tech person for several organisations, AI-assisted development.</span></li>
-  </ol>
-  <div class="cols" style="margin-top:28px">
-    <div class="col"><h3 data-l="fr">Titre professionnel Développeuse web et web mobile</h3><h3 data-l="en">Web and Mobile Web Developer (French state-recognised degree)</h3><p class="note" data-l="fr">Titre RNCP de niveau 5, Ottho, en alternance</p><p class="note" data-l="en">Level 5 (EQF), Ottho, work-study</p></div>
-    <div class="col"><h3 data-l="fr">Master 2 en langues</h3><h3 data-l="en">Master's degree in languages</h3><p class="note" data-l="fr">Anglais professionnel courant</p><p class="note" data-l="en">Fluent professional English</p></div>
-    <div class="col"><h3 data-l="fr">Parcours full stack</h3><h3 data-l="en">Full stack track</h3><p class="note">Codecademy · React, Node.js</p></div>
+<!-- ================= SERVICES ================= -->
+<section class="section" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker"><span class="num">02</span><span data-i18n="services.kicker">Ce que je fais</span></p>
+      <h2 id="services-title" data-i18n="services.title">Quatre façons de faire avancer votre projet</h2>
+      <p class="section-lead" data-i18n="services.lead">Chaque offre inclut le cadrage, le suivi et la mise en production. Vous ne récupérez pas un fichier, vous récupérez un outil qui fonctionne.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></div>
+        <h3 data-i18n="s1.t">Sites WordPress</h3>
+        <p data-i18n="s1.p">Des sites vitrines et éditoriaux rapides, bien référencés et que vos équipes mettent à jour sans moi. Plus de 10 sites déjà livrés.</p>
+        <ul class="chips"><li class="chip">WordPress</li><li class="chip">SEO</li><li class="chip">Responsive</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M17.5 14v7M14 17.5h7"/></svg></div>
+        <h3 data-i18n="s2.t">Apps no-code et sur-mesure</h3>
+        <p data-i18n="s2.p">Des applications métier en production : facturation, planning, paie, back-offices. En no-code pour aller vite, en Vue/Nuxt ou React quand il faut aller plus loin.</p>
+        <ul class="chips"><li class="chip">Bubble</li><li class="chip">WeWeb</li><li class="chip">Vue / Nuxt</li><li class="chip">React</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="12" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M7.3 11 16.7 7M7.3 13l9.4 4"/></svg></div>
+        <h3 data-i18n="s3.t">Automatisations</h3>
+        <p data-i18n="s3.p">Je supprime les tâches répétitives : synchronisation de données entre vos outils, publication de contenus, notifications. Des workflows qui tournent en production.</p>
+        <ul class="chips"><li class="chip">Make</li><li class="chip">Zapier</li><li class="chip">n8n</li><li class="chip">Notion</li></ul>
+      </article>
+      <article class="card">
+        <div class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg></div>
+        <h3 data-i18n="s4.t">Pilotage de projet digital</h3>
+        <p data-i18n="s4.p">Je cadre le besoin, rédige les spécifications, tiens le planning et coordonne jusqu'à la livraison. Côté client ou côté équipe tech, je fais le lien entre les deux.</p>
+        <ul class="chips"><li class="chip" data-i18n="s4.c1">Cadrage</li><li class="chip" data-i18n="s4.c2">Specs</li><li class="chip" data-i18n="s4.c3">Planning</li><li class="chip" data-i18n="s4.c4">Recette</li></ul>
+      </article>
+    </div>
   </div>
 </section>
 
-<section class="end">
-  <h2 data-l="fr">On en parle ?</h2><h2 data-l="en">Let's talk</h2>
-  <p data-l="fr">Je cherche un poste où je serais la référente web et outils numériques d'une structure : webmaster, chargée de projets numériques, référente outils, onboarding ou formation chez un éditeur de logiciel. Toulouse ou à distance, en français ou en anglais.</p>
-  <p data-l="en">I'm looking for a role as an organisation's go-to person for web and digital tools: webmaster, digital project officer, tools lead, onboarding or training at a software company. Toulouse or remote, in French or English.</p>
-  <p class="todo" style="color:#fff" data-l="fr">Email et LinkedIn à compléter</p>
-  <p class="todo" style="color:#fff" data-l="en">Email and LinkedIn to be added</p>
+<!-- ================= MÉTHODE ================= -->
+<section class="section section-alt" id="methode" aria-labelledby="method-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker"><span class="num">03</span><span data-i18n="method.kicker">Ma méthode</span></p>
+      <h2 id="method-title" data-i18n="method.title">Cinq étapes, zéro zone floue</h2>
+      <p class="section-lead" data-i18n="method.lead">Chaque étape produit un livrable concret. Vous savez toujours où en est le projet et ce qui reste à faire.</p>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <h3 data-i18n="m1.t">Cadrage</h3>
+        <p data-i18n="m1.p">J'écoute votre besoin, vos contraintes et vos utilisateurs. On fixe ensemble l'objectif, le périmètre et le budget.</p>
+        <span class="deliv" data-i18n="m1.d">Livrable : note de cadrage</span>
+      </li>
+      <li class="step">
+        <h3 data-i18n="m2.t">Spécifications</h3>
+        <p data-i18n="m2.p">Je découpe le projet en fonctionnalités, je choisis la stack et je pose un planning réaliste.</p>
+        <span class="deliv" data-i18n="m2.d">Livrable : specs et planning</span>
+      </li>
+      <li class="step">
+        <h3 data-i18n="m3.t">Développement</h3>
+        <p data-i18n="m3.p">Je construis par itérations courtes, avec des points réguliers pour valider au fil de l'eau.</p>
+        <span class="deliv" data-i18n="m3.d">Livrable : versions testables</span>
+      </li>
+      <li class="step">
+        <h3 data-i18n="m4.t">Recette</h3>
+        <p data-i18n="m4.p">On teste ensemble sur des cas réels. Je corrige jusqu'à validation, sans surprise le jour J.</p>
+        <span class="deliv" data-i18n="m4.d">Livrable : version validée</span>
+      </li>
+      <li class="step">
+        <h3 data-i18n="m5.t">Mise en production et suivi</h3>
+        <p data-i18n="m5.p">Je mets en ligne, je documente et je reste disponible pour les ajustements après le lancement.</p>
+        <span class="deliv" data-i18n="m5.d">Livrable : outil en ligne et documentation</span>
+      </li>
+    </ol>
+  </div>
 </section>
 
-</div>
+<!-- ================= PROJETS ================= -->
+<section class="section" id="projets" aria-labelledby="projects-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker"><span class="num">04</span><span data-i18n="nav.projects">Projets</span></p>
+      <h2 id="projects-title" data-i18n="projects.title">Des outils en production, utilisés par de vrais clients</h2>
+      <p class="section-lead" data-i18n="projects.lead">Chaque carte ouvre une étude de cas : contexte, enjeu, démarche, stack et résultat.</p>
+    </div>
+
+    <div class="projects">
+      <!-- 1. Escapod -->
+      <article class="project">
+        <div class="thumb">
+          <!-- A COMPLETER : <img src="escapod.webp" width="800" height="500" alt="Capture de l'application Escapod" loading="lazy"> -->
+          <span class="thumb-mono" aria-hidden="true">Escapod</span>
+          <span class="todo" data-i18n="todo.shot">Capture à fournir</span>
+        </div>
+        <div class="project-body">
+          <p class="project-kind" data-i18n="p1.kind">App Bubble · Automatisation</p>
+          <h3>Escapod</h3>
+          <p data-i18n="p1.sum">Application Bubble en production avec module de facturation et publication Instagram automatisée depuis Notion.</p>
+          <ul class="chips"><li class="chip">Bubble</li><li class="chip">Make</li><li class="chip">Notion</li><li class="chip">Instagram</li></ul>
+          <button class="project-open" type="button" data-case="case-escapod"><span data-i18n="ui.open">Voir l'étude de cas</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+
+      <!-- 2. d-votion.fr -->
+      <article class="project">
+        <div class="thumb">
+          <span class="thumb-mono" aria-hidden="true">d-votion</span>
+          <span class="flag" data-i18n="todo.validate">À valider</span>
+          <span class="todo" data-i18n="todo.shot">Capture à fournir</span>
+        </div>
+        <div class="project-body">
+          <p class="project-kind" data-i18n="p2.kind">App Bubble · Outil métier</p>
+          <h3>d-votion.fr</h3>
+          <p data-i18n="p2.sum">Application Bubble avec planning, dédoublonnage des fournisseurs et module de paie.</p>
+          <ul class="chips"><li class="chip">Bubble</li></ul>
+          <button class="project-open" type="button" data-case="case-dvotion"><span data-i18n="ui.open">Voir l'étude de cas</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+
+      <!-- 3. Nuxt / Vue -->
+      <article class="project">
+        <div class="thumb">
+          <span class="thumb-mono" aria-hidden="true">Nuxt</span>
+          <span class="todo" data-i18n="todo.shot">Capture à fournir</span>
+        </div>
+        <div class="project-body">
+          <p class="project-kind" data-i18n="p3.kind">Développement front-end</p>
+          <h3 data-i18n="p3.title">Application Vue / Nuxt pour un client</h3>
+          <p data-i18n="p3.sum">Développement front-end en binôme avec une autre développeuse, sur un projet client.</p>
+          <ul class="chips"><li class="chip">Vue</li><li class="chip">Nuxt</li><li class="chip">JavaScript</li></ul>
+          <button class="project-open" type="button" data-case="case-nuxt"><span data-i18n="ui.open">Voir l'étude de cas</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+
+      <!-- 4. WordPress -->
+      <article class="project">
+        <div class="thumb">
+          <span class="thumb-mono" aria-hidden="true">WP · 10+</span>
+          <span class="todo" data-i18n="todo.shots">Captures à fournir</span>
+        </div>
+        <div class="project-body">
+          <p class="project-kind" data-i18n="p4.kind">Sites web · SEO</p>
+          <h3 data-i18n="p4.title">Sites WordPress</h3>
+          <p data-i18n="p4.sum">Une sélection parmi plus de 10 sites livrés : un festival, une structure européenne, des indépendantes.</p>
+          <ul class="chips"><li class="chip">WordPress</li><li class="chip">SEO</li><li class="chip">HTML / CSS</li></ul>
+          <button class="project-open" type="button" data-case="case-wordpress"><span data-i18n="ui.open">Voir l'étude de cas</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+
+      <!-- 5. Automatisation éditoriale -->
+      <article class="project">
+        <div class="thumb">
+          <span class="thumb-mono" aria-hidden="true">Make</span>
+          <span class="todo" data-i18n="todo.scenario">Capture du scénario à fournir</span>
+        </div>
+        <div class="project-body">
+          <p class="project-kind" data-i18n="p5.kind">Automatisation</p>
+          <h3 data-i18n="p5.title">Automatisation éditoriale</h3>
+          <p data-i18n="p5.sum">Un scénario Make qui publie sur Instagram les contenus préparés dans Notion.</p>
+          <ul class="chips"><li class="chip">Make</li><li class="chip">Notion</li><li class="chip">Instagram</li></ul>
+          <button class="project-open" type="button" data-case="case-automation"><span data-i18n="ui.open">Voir l'étude de cas</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+
+      <!-- 6. Missions freelance -->
+      <article class="project">
+        <div class="thumb">
+          <span class="thumb-mono" aria-hidden="true">Freelance</span>
+          <span class="todo" data-i18n="todo.shot">Capture à fournir</span>
+        </div>
+        <div class="project-body">
+          <p class="project-kind" data-i18n="p6.kind">Freelance · Product building</p>
+          <h3 data-i18n="p6.title">Atelier Digital &amp; Nocode Focus</h3>
+          <p data-i18n="p6.sum">Développement et product building en freelance, dont le site d'un cabinet de conseil en gestion de patrimoine.</p>
+          <ul class="chips"><li class="chip">No-code</li><li class="chip">Vercel</li><li class="chip" data-i18n="p6.chip">Suivi client</li></ul>
+          <button class="project-open" type="button" data-case="case-freelance"><span data-i18n="ui.open">Voir l'étude de cas</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STACK ================= -->
+<section class="section section-alt" id="stack" aria-labelledby="stack-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker"><span class="num">05</span><span data-i18n="nav.stack">Stack</span></p>
+      <h2 id="stack-title" data-i18n="stack.title">Le bon outil pour chaque besoin</h2>
+      <p class="section-lead" data-i18n="stack.lead">Mes compétences, regroupées par ce qu'elles vous permettent de faire.</p>
+    </div>
+    <div class="stack">
+      <div class="stack-group">
+        <h3 data-i18n="st1.t">Front-end</h3>
+        <p data-i18n="st1.p">Interfaces rapides et responsive</p>
+        <ul class="chips"><li class="chip">HTML5</li><li class="chip">CSS3</li><li class="chip">JavaScript</li><li class="chip">JSON</li><li class="chip">React</li><li class="chip">Vue / Nuxt</li><li class="chip">Responsive</li><li class="chip">Iframes</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 data-i18n="st2.t">CMS</h3>
+        <p data-i18n="st2.p">Sites que vous gérez en autonomie</p>
+        <ul class="chips"><li class="chip">WordPress</li><li class="chip" data-i18n="st2.c">10+ sites livrés</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 data-i18n="st3.t">No-code / low-code</h3>
+        <p data-i18n="st3.p">Apps métier livrées vite</p>
+        <ul class="chips"><li class="chip">Bubble</li><li class="chip">WeWeb</li><li class="chip">Notion</li><li class="chip">Coda</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 data-i18n="st4.t">Automatisation</h3>
+        <p data-i18n="st4.p">Vos outils connectés entre eux</p>
+        <ul class="chips"><li class="chip">Make</li><li class="chip">Zapier</li><li class="chip">n8n</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 data-i18n="st5.t">Développement assisté par IA</h3>
+        <p data-i18n="st5.p">Produire plus vite, en vérifiant chaque ligne</p>
+        <ul class="chips"><li class="chip">Claude Code</li><li class="chip">Cursor</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 data-i18n="st6.t">SEO et contenu</h3>
+        <p data-i18n="st6.p">Être trouvé, être lu</p>
+        <ul class="chips"><li class="chip" data-i18n="st6.c1">SEO technique</li><li class="chip" data-i18n="st6.c2">Rédaction web</li><li class="chip">Newsletters</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 data-i18n="st7.t">Design et outils</h3>
+        <p data-i18n="st7.p">Visuels et bureautique avancée</p>
+        <ul class="chips"><li class="chip">Photoshop</li><li class="chip">Canva</li><li class="chip">Google Workspace</li><li class="chip">Office</li></ul>
+      </div>
+      <div class="stack-group">
+        <h3 data-i18n="st8.t">Gestion de projet</h3>
+        <p data-i18n="st8.p">Du besoin à la livraison</p>
+        <ul class="chips"><li class="chip" data-i18n="st8.c1">Cadrage</li><li class="chip" data-i18n="st8.c2">Spécifications</li><li class="chip" data-i18n="st8.c3">Planning</li><li class="chip" data-i18n="st8.c4">Recette</li><li class="chip">Documentation</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PARCOURS ================= -->
+<section class="section" id="parcours" aria-labelledby="path-title">
+  <div class="container">
+    <div class="section-head">
+      <p class="kicker"><span class="num">06</span><span data-i18n="nav.path">Parcours</span></p>
+      <h2 id="path-title" data-i18n="path.title">Un parcours tourné vers la livraison</h2>
+    </div>
+    <ol class="timeline">
+      <li class="tl-item">
+        <p class="tl-when" data-i18n="t1.w">Depuis 2024</p>
+        <h3 data-i18n="t1.t">Développeuse et product builder freelance</h3>
+        <p data-i18n="t1.p">Missions pour Atelier Digital, Nocode Focus et des clients directs : sites, applications no-code et automatisations, du cadrage au support après mise en ligne.</p>
+      </li>
+      <li class="tl-item">
+        <p class="tl-when">2024 · 2025</p>
+        <h3 data-i18n="t2.t">Formation et alternance Développement Web Front-End, La Bastide</h3>
+        <p data-i18n="t2.p">Plusieurs projets Bubble, dont une application de parcours à défis pour une entreprise cliente, pilotée en autonomie : cadrage, pilotage, développement et déploiement, en lien direct avec le client.</p>
+      </li>
+      <li class="tl-item">
+        <p class="tl-when" data-i18n="t3.w">8 ans</p>
+        <h3 data-i18n="t3.t">Gestion digitale complète de ma propre structure</h3>
+        <p data-i18n="t3.p">Site, SEO, newsletters, automatisations : je connais les contraintes du client de l'intérieur.</p>
+      </li>
+      <li class="tl-item">
+        <p class="tl-when" data-i18n="t4.w">Master 2</p>
+        <h3 data-i18n="t4.t">LEA Anglais-Allemand, Communication internationale, Lyon 3</h3>
+        <p data-i18n="t4.p">Un atout pour les projets et les équipes internationales. Je travaille déjà au quotidien en anglais avec une équipe européenne.</p>
+      </li>
+    </ol>
+    <ul class="langs" aria-label="Langues" data-i18n-attr="aria-label:langs.label">
+      <li class="lang"><abbr title="Français">FR</abbr><span data-i18n="langs.fr">Français, langue maternelle</span></li>
+      <li class="lang"><abbr title="English">EN</abbr><span data-i18n="langs.en">Anglais, courant professionnel</span></li>
+      <li class="lang"><abbr title="Deutsch">DE</abbr><span data-i18n="langs.de">Allemand <span class="todo">niveau à préciser</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact" aria-labelledby="contact-title" style="padding-top:0">
+  <div class="container">
+    <div class="contact-box">
+      <div>
+        <p class="kicker"><span class="num" style="color:inherit;opacity:.6">07</span><span data-i18n="nav.contact">Contact</span></p>
+        <h2 id="contact-title" data-i18n="contact.title">Un projet, un poste ? Parlons-en.</h2>
+        <p class="section-lead" data-i18n="contact.lead">Dites-moi ce que vous voulez construire, je vous dis comment je m'y prendrais.</p>
+        <ul class="avail" style="margin-top:24px">
+          <li data-i18n="contact.a1">Disponible immédiatement</li>
+          <li data-i18n="contact.a2">CDI ou missions freelance</li>
+          <li data-i18n="contact.a3">Basée à Toulouse, mobile en France, remote possible</li>
+        </ul>
+      </div>
+      <ul class="contact-list">
+        <!-- A COMPLETER : remplacer A-COMPLETER par les vraies adresses -->
+        <li><a href="mailto:A-COMPLETER"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span><small>Email</small><span class="todo" data-i18n="todo.email">adresse email à compléter</span></span></a></li>
+        <li><a href="https://www.linkedin.com/in/A-COMPLETER" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11H3v-11Zm6.5 0h3.8v1.5h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4v-11Z"/></svg><span><small>LinkedIn</small><span class="todo" data-i18n="todo.linkedin">lien LinkedIn à compléter</span></span></a></li>
+        <li><a href="https://github.com/A-COMPLETER" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg><span><small>GitHub</small><span class="todo" data-i18n="todo.github">lien GitHub à compléter</span></span></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year">2026</span> Jessalynn Choby · <span data-i18n="footer.role">Développeuse web &amp; No-Code, Cheffe de projet digital</span></p>
+    <a href="#top" data-i18n="footer.top">Retour en haut ↑</a>
+  </div>
+</footer>
+
+<!-- ================= ÉTUDES DE CAS ================= -->
+<!-- Les textes entre surlignage jaune sont à compléter. Ne rien laisser en jaune avant la mise en ligne. -->
+
+<dialog class="case" id="case-escapod" aria-labelledby="case-escapod-title">
+  <div class="case-inner">
+    <div class="case-top">
+      <div><p class="project-kind" data-i18n="p1.kind">App Bubble · Automatisation</p><h3 id="case-escapod-title">Escapod</h3></div>
+      <button class="close-btn" type="button" data-close aria-label="Fermer" data-i18n-attr="aria-label:ui.close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <dl>
+      <dt data-i18n="case.context">Contexte</dt>
+      <dd data-i18n="c1.context"><span class="todo">À compléter : activité d'Escapod, qui utilise l'application, depuis quand elle est en production.</span></dd>
+      <dt data-i18n="case.stake">Enjeu</dt>
+      <dd data-i18n="c1.stake"><p>Disposer d'une application fiable en production, intégrant la facturation, et automatiser la publication de contenus sur Instagram.</p><p><span class="todo">À préciser : le problème de départ (ex. facturation manuelle, outils éparpillés).</span></p></dd>
+      <dt data-i18n="case.approach">Ma démarche</dt>
+      <dd data-i18n="c1.approach"><ul><li>Développement de l'application sur Bubble.</li><li>Conception du module de facturation.</li><li>Scénario Make qui relie Notion à Instagram pour publier sans intervention manuelle.</li><li><span class="todo">À compléter : cadrage, durée, interlocuteurs, ton rôle exact.</span></li></ul></dd>
+      <dt data-i18n="case.stack">Stack</dt>
+      <dd><ul class="chips"><li class="chip">Bubble</li><li class="chip">Make</li><li class="chip">Notion</li><li class="chip">Instagram</li></ul></dd>
+      <dt data-i18n="case.result">Résultat</dt>
+      <dd data-i18n="c1.result"><span class="todo">Résultat chiffré à compléter : ex. heures gagnées par semaine, nombre de factures générées, nombre d'utilisateurs.</span></dd>
+    </dl>
+    <div class="case-shot"><span class="todo" data-i18n="todo.shots">Captures à fournir</span></div>
+    <div class="case-links"><a class="btn btn-primary" href="#" data-i18n="todo.link"><span class="todo">Lien à compléter</span></a></div>
+  </div>
+</dialog>
+
+<dialog class="case" id="case-dvotion" aria-labelledby="case-dvotion-title">
+  <div class="case-inner">
+    <div class="case-top">
+      <div><p class="project-kind" data-i18n="p2.kind">App Bubble · Outil métier</p><h3 id="case-dvotion-title">d-votion.fr</h3></div>
+      <button class="close-btn" type="button" data-close aria-label="Fermer" data-i18n-attr="aria-label:ui.close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <p style="margin-bottom:18px"><span class="todo" data-i18n="todo.dvotion">Projet à valider avant publication (accord du client, périmètre).</span></p>
+    <dl>
+      <dt data-i18n="case.context">Contexte</dt>
+      <dd data-i18n="c2.context"><span class="todo">À compléter : activité de d-votion, utilisateurs de l'outil.</span></dd>
+      <dt data-i18n="case.stake">Enjeu</dt>
+      <dd data-i18n="c2.stake"><p>Gérer dans une seule application le planning, une base fournisseurs sans doublons et la paie.</p><p><span class="todo">À préciser : comment c'était géré avant.</span></p></dd>
+      <dt data-i18n="case.approach">Ma démarche</dt>
+      <dd data-i18n="c2.approach"><ul><li>Développement sur Bubble de trois modules : planning, dédoublonnage des fournisseurs, paie.</li><li><span class="todo">À compléter : logique de dédoublonnage, règles de calcul de la paie, ton rôle exact.</span></li></ul></dd>
+      <dt data-i18n="case.stack">Stack</dt>
+      <dd><ul class="chips"><li class="chip">Bubble</li><li class="chip todo">+ ?</li></ul></dd>
+      <dt data-i18n="case.result">Résultat</dt>
+      <dd data-i18n="c2.result"><span class="todo">Résultat chiffré à compléter : ex. doublons supprimés, temps de préparation de la paie.</span></dd>
+    </dl>
+    <div class="case-shot"><span class="todo" data-i18n="todo.shots">Captures à fournir</span></div>
+    <div class="case-links"><a class="btn btn-primary" href="https://d-votion.fr" target="_blank" rel="noopener">d-votion.fr</a></div>
+  </div>
+</dialog>
+
+<dialog class="case" id="case-nuxt" aria-labelledby="case-nuxt-title">
+  <div class="case-inner">
+    <div class="case-top">
+      <div><p class="project-kind" data-i18n="p3.kind">Développement front-end</p><h3 id="case-nuxt-title" data-i18n="p3.title">Application Vue / Nuxt pour un client</h3></div>
+      <button class="close-btn" type="button" data-close aria-label="Fermer" data-i18n-attr="aria-label:ui.close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <p style="margin-bottom:18px"><span class="todo" data-i18n="todo.nuxt">Accord du client à obtenir pour citer son nom.</span></p>
+    <dl>
+      <dt data-i18n="case.context">Contexte</dt>
+      <dd data-i18n="c3.context"><span class="todo">À compléter : nom du client (si accord), secteur, objet de l'application.</span></dd>
+      <dt data-i18n="case.stake">Enjeu</dt>
+      <dd data-i18n="c3.stake"><span class="todo">À compléter : ce que l'application devait permettre.</span></dd>
+      <dt data-i18n="case.approach">Ma démarche</dt>
+      <dd data-i18n="c3.approach"><ul><li>Développement front-end en Vue / Nuxt, en binôme avec une autre développeuse.</li><li><span class="todo">À compléter : ton périmètre (pages, composants, intégrations), organisation du travail à deux, revues de code.</span></li></ul></dd>
+      <dt data-i18n="case.stack">Stack</dt>
+      <dd><ul class="chips"><li class="chip">Vue</li><li class="chip">Nuxt</li><li class="chip">JavaScript</li><li class="chip todo">+ ?</li></ul></dd>
+      <dt data-i18n="case.result">Résultat</dt>
+      <dd data-i18n="c3.result"><span class="todo">Résultat à compléter : mise en ligne, usage, retour du client.</span></dd>
+    </dl>
+    <div class="case-shot"><span class="todo" data-i18n="todo.shots">Captures à fournir</span></div>
+  </div>
+</dialog>
+
+<dialog class="case" id="case-wordpress" aria-labelledby="case-wordpress-title">
+  <div class="case-inner">
+    <div class="case-top">
+      <div><p class="project-kind" data-i18n="p4.kind">Sites web · SEO</p><h3 id="case-wordpress-title" data-i18n="p4.title">Sites WordPress</h3></div>
+      <button class="close-btn" type="button" data-close aria-label="Fermer" data-i18n-attr="aria-label:ui.close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <dl>
+      <dt data-i18n="case.context">Contexte</dt>
+      <dd data-i18n="c4.context">Plus de 10 sites WordPress livrés à des clients réels : structures culturelles, projet européen, indépendantes.</dd>
+      <dt data-i18n="case.stake">Enjeu</dt>
+      <dd data-i18n="c4.stake">Des sites professionnels, bien référencés, que les clients peuvent faire vivre, avec un suivi dans la durée quand c'est nécessaire.</dd>
+      <dt data-i18n="case.approach">Sélection</dt>
+      <dd data-i18n="c4.approach"><ul>
+        <li><strong>Le Cercle Enchanté</strong>, festival annuel : refonte partielle du site, maintenance et mise à jour à chaque édition, animation d'Instagram. <span class="todo">lien + capture</span></li>
+        <li><strong>The Well</strong>, structure européenne : responsable de l'ensemble du site (gestion, évolutions, mises à jour), avec une équipe internationale à distance, entièrement en anglais. <span class="todo">lien + capture</span></li>
+        <li><strong>Site d'Hélène</strong> : site sur mesure, du recueil du besoin à la mise en ligne. Structuration des contenus, référencement naturel, développement, prise en main par la cliente. <span class="todo">lien + capture</span></li>
+        <li><strong>Site de Marie</strong> : reprise d'un projet en cours et développement de toute une partie du site. <span class="todo">lien + capture</span></li>
+      </ul></dd>
+      <dt data-i18n="case.stack">Stack</dt>
+      <dd><ul class="chips"><li class="chip">WordPress</li><li class="chip">HTML / CSS</li><li class="chip" data-i18n="st6.c1">SEO technique</li><li class="chip" data-i18n="st6.c2">Rédaction web</li></ul></dd>
+      <dt data-i18n="case.result">Résultat</dt>
+      <dd data-i18n="c4.result"><span class="todo">Résultat chiffré à compléter : ex. trafic, positions Google, vitesse (score PageSpeed), durée des collaborations.</span></dd>
+    </dl>
+    <div class="case-shot"><span class="todo" data-i18n="todo.shots">Captures à fournir</span></div>
+  </div>
+</dialog>
+
+<dialog class="case" id="case-automation" aria-labelledby="case-automation-title">
+  <div class="case-inner">
+    <div class="case-top">
+      <div><p class="project-kind" data-i18n="p5.kind">Automatisation</p><h3 id="case-automation-title" data-i18n="p5.title">Automatisation éditoriale</h3></div>
+      <button class="close-btn" type="button" data-close aria-label="Fermer" data-i18n-attr="aria-label:ui.close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <dl>
+      <dt data-i18n="case.context">Contexte</dt>
+      <dd data-i18n="c5.context"><span class="todo">À préciser : pour quel client ou projet, volume de publications.</span></dd>
+      <dt data-i18n="case.stake">Enjeu</dt>
+      <dd data-i18n="c5.stake">Supprimer la publication manuelle sur Instagram, en partant des contenus préparés et validés dans Notion.</dd>
+      <dt data-i18n="case.approach">Ma démarche</dt>
+      <dd data-i18n="c5.approach"><ul><li>Conception d'un scénario Make : lecture des contenus prêts dans Notion, publication sur Instagram.</li><li><span class="todo">À compléter : déclenchement, gestion des erreurs, statut mis à jour dans Notion.</span></li></ul></dd>
+      <dt data-i18n="case.stack">Stack</dt>
+      <dd><ul class="chips"><li class="chip">Make</li><li class="chip">Notion</li><li class="chip">Instagram</li></ul></dd>
+      <dt data-i18n="case.result">Résultat</dt>
+      <dd data-i18n="c5.result"><span class="todo">Résultat chiffré à compléter : ex. temps gagné par semaine, nombre de posts publiés automatiquement.</span></dd>
+    </dl>
+    <div class="case-shot"><span class="todo" data-i18n="todo.scenario">Capture du scénario à fournir</span></div>
+  </div>
+</dialog>
+
+<dialog class="case" id="case-freelance" aria-labelledby="case-freelance-title">
+  <div class="case-inner">
+    <div class="case-top">
+      <div><p class="project-kind" data-i18n="p6.kind">Freelance · Product building</p><h3 id="case-freelance-title" data-i18n="p6.title">Atelier Digital &amp; Nocode Focus</h3></div>
+      <button class="close-btn" type="button" data-close aria-label="Fermer" data-i18n-attr="aria-label:ui.close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <dl>
+      <dt data-i18n="case.context">Contexte</dt>
+      <dd data-i18n="c6.context">Depuis 2024, missions de développement et de product building en freelance pour Atelier Digital et Nocode Focus.</dd>
+      <dt data-i18n="case.stake">Enjeu</dt>
+      <dd data-i18n="c6.stake">Livrer des produits prêts pour la production pour les clients de ces structures, en autonomie, du développement au support.</dd>
+      <dt data-i18n="case.approach">Ma démarche</dt>
+      <dd data-i18n="c6.approach"><ul>
+        <li><strong>Nocode Focus, Conselia Patrimoine</strong> (cabinet de conseil en gestion de patrimoine) : développement du site, accompagnement de la cliente, intégration de ses retours, support et mise en place de l'hébergement sur Vercel.</li>
+        <li><strong>Atelier Digital</strong> : <span class="todo">À compléter : projets, livrables, stack.</span></li>
+        <li><span class="todo">À compléter : autres livrables Nocode Focus.</span></li>
+      </ul></dd>
+      <dt data-i18n="case.stack">Stack</dt>
+      <dd><ul class="chips"><li class="chip">Vercel</li><li class="chip todo">+ ?</li></ul></dd>
+      <dt data-i18n="case.result">Résultat</dt>
+      <dd data-i18n="c6.result"><span class="todo">Résultat à compléter : sites et apps livrés, retours clients, durée des collaborations.</span></dd>
+    </dl>
+    <div class="case-shot"><span class="todo" data-i18n="todo.shots">Captures à fournir</span></div>
+    <div class="case-links"><a class="btn btn-primary" href="#" data-i18n="todo.linkConselia"><span class="todo">Lien Conselia Patrimoine à compléter</span></a></div>
+  </div>
+</dialog>
+
 <script>
-(function(){
-  var root=document.documentElement, btn=document.getElementById('langbtn');
-  function set(l){root.setAttribute('data-lang',l);root.setAttribute('lang',l);btn.textContent=l==='fr'?'EN':'FR';try{localStorage.setItem('jess-lang',l)}catch(e){}}
-  var saved=null;try{saved=localStorage.getItem('jess-lang')}catch(e){}
-  if(saved==='en')set('en');
-  btn.addEventListener('click',function(){set(root.getAttribute('data-lang')==='fr'?'en':'fr')});
+(function () {
+  "use strict";
+
+  /* ---------- Traductions EN (le français est le contenu HTML) ---------- */
+  var EN = {
+    "meta.title": "Jessalynn Choby · Web & No-Code Developer, Digital Project Manager",
+    "meta.desc": "Jessalynn Choby, web and no-code developer and digital project manager based in Toulouse. I scope, build and ship reliable digital tools: WordPress, Bubble, Vue/Nuxt, Make automations.",
+    "ui.skip": "Skip to content",
+    "ui.home": "Jessalynn Choby, home",
+    "ui.navLabel": "Main navigation",
+    "ui.menu": "Menu",
+    "ui.open": "Read the case study",
+    "ui.close": "Close",
+    "nav.about": "About",
+    "nav.services": "Services",
+    "nav.method": "Method",
+    "nav.projects": "Projects",
+    "nav.stack": "Stack",
+    "nav.path": "Background",
+    "nav.contact": "Contact",
+
+    "hero.status": "Available now · Permanent role or freelance",
+    "hero.role": "Web &amp; No-Code Developer, Digital Project Manager",
+    "hero.pitch": "I scope, build and ship reliable digital tools, <strong>from the client's need to go-live</strong>. One point of contact who understands your business and writes the code.",
+    "hero.cta1": "See my projects",
+    "hero.cta2": "Get in touch",
+    "hero.loc": "Toulouse, mobile across France, remote friendly",
+    "hero.langs": "French, English, German",
+    "board.title": "Your digital project",
+    "board.sub": "Managed end to end",
+    "board.pill": "In acceptance",
+    "stats.label": "Key figures",
+    "stats.wp": "WordPress sites delivered to clients",
+    "stats.bubble": "business apps in production",
+    "stats.langs": "working languages: FR, EN, DE",
+    "stats.yearsSr": "years",
+    "stats.years": "years running the digital side of an organisation, as the client",
+
+    "about.title": "I code and I manage. Both, on the same project.",
+    "about.p1": "I am a <strong>developer and digital project manager</strong>. I start by understanding your business need, then turn it into clear specifications and a realistic schedule.",
+    "about.p2": "Then I build the solution with the right tool: WordPress, Bubble, Vue/Nuxt, React or a Make automation. I don't pick a stack out of habit, but based on your budget, your deadlines and what your team will be able to maintain.",
+    "about.p3": "I run acceptance testing and deployment, and I document everything so the tool keeps running after delivery. You get a single point of contact who speaks both business and tech, in French, English or German.",
+    "duo.dev": "Development",
+    "duo.dev1": "Front-end HTML, CSS, JavaScript, React, Vue/Nuxt",
+    "duo.dev2": "Bubble and WeWeb apps in production",
+    "duo.dev3": "Make, Zapier, n8n workflows",
+    "duo.dev4": "AI-assisted development (Claude Code, Cursor)",
+    "duo.pm": "Project management",
+    "duo.pm1": "Gathering and scoping requirements",
+    "duo.pm2": "Specifications and feature breakdown",
+    "duo.pm3": "Planning, client follow-up, acceptance testing",
+    "duo.pm4": "Delivery and documentation",
+
+    "services.kicker": "What I do",
+    "services.title": "Four ways to move your project forward",
+    "services.lead": "Every offer includes scoping, follow-up and deployment. You don't get a file, you get a tool that works.",
+    "s1.t": "WordPress websites",
+    "s1.p": "Fast, well-ranked showcase and editorial sites that your team can update without me. Over 10 sites delivered so far.",
+    "s2.t": "No-code and custom apps",
+    "s2.p": "Business apps in production: invoicing, scheduling, payroll, back offices. No-code to move fast, Vue/Nuxt or React when you need to go further.",
+    "s3.t": "Automations",
+    "s3.p": "I remove repetitive tasks: syncing data between your tools, publishing content, notifications. Workflows that run in production.",
+    "s4.t": "Digital project management",
+    "s4.p": "I scope the need, write the specs, own the schedule and coordinate until delivery. I bridge the client side and the tech side.",
+    "s4.c1": "Scoping", "s4.c2": "Specs", "s4.c3": "Planning", "s4.c4": "Testing",
+
+    "method.kicker": "My method",
+    "method.title": "Five steps, no grey areas",
+    "method.lead": "Each step produces a concrete deliverable. You always know where the project stands and what is left to do.",
+    "m1.t": "Scoping",
+    "m1.p": "I listen to your need, your constraints and your users. Together we set the goal, the scope and the budget.",
+    "m1.d": "Deliverable: scoping note",
+    "m2.t": "Specifications",
+    "m2.p": "I break the project down into features, choose the stack and set a realistic schedule.",
+    "m2.d": "Deliverable: specs and schedule",
+    "m3.t": "Development",
+    "m3.p": "I build in short iterations, with regular check-ins so you validate as we go.",
+    "m3.d": "Deliverable: testable versions",
+    "m4.t": "Acceptance testing",
+    "m4.p": "We test together on real cases. I fix until sign-off, so launch day holds no surprises.",
+    "m4.d": "Deliverable: approved version",
+    "m5.t": "Go-live and follow-up",
+    "m5.p": "I deploy, document and stay available for adjustments after launch.",
+    "m5.d": "Deliverable: live tool and documentation",
+
+    "projects.title": "Tools in production, used by real clients",
+    "projects.lead": "Each card opens a case study: context, challenge, approach, stack and outcome.",
+    "p1.kind": "Bubble app · Automation",
+    "p1.sum": "Bubble app in production with an invoicing module and automated Instagram publishing from Notion.",
+    "p2.kind": "Bubble app · Business tool",
+    "p2.sum": "Bubble app with scheduling, supplier deduplication and a payroll module.",
+    "p3.kind": "Front-end development",
+    "p3.title": "Vue / Nuxt app for a client",
+    "p3.sum": "Front-end development in pair with another developer, on a client project.",
+    "p4.kind": "Websites · SEO",
+    "p4.title": "WordPress websites",
+    "p4.sum": "A selection from over 10 sites delivered: a festival, a European organisation, independent professionals.",
+    "p5.kind": "Automation",
+    "p5.title": "Editorial automation",
+    "p5.sum": "A Make scenario that publishes to Instagram the content prepared in Notion.",
+    "p6.kind": "Freelance · Product building",
+    "p6.title": "Atelier Digital &amp; Nocode Focus",
+    "p6.sum": "Freelance development and product building, including the website of a wealth management advisory firm.",
+    "p6.chip": "Client follow-up",
+
+    "case.context": "Context",
+    "case.stake": "Challenge",
+    "case.approach": "My approach",
+    "case.stack": "Stack",
+    "case.result": "Outcome",
+
+    "c1.context": "<span class=\"todo\">To complete: what Escapod does, who uses the app, how long it has been in production.</span>",
+    "c1.stake": "<p>Run a reliable app in production with built-in invoicing, and automate content publishing on Instagram.</p><p><span class=\"todo\">To specify: the starting problem.</span></p>",
+    "c1.approach": "<ul><li>Built the app on Bubble.</li><li>Designed the invoicing module.</li><li>Make scenario linking Notion to Instagram, publishing with no manual step.</li><li><span class=\"todo\">To complete: scoping, duration, stakeholders, exact role.</span></li></ul>",
+    "c1.result": "<span class=\"todo\">Measurable outcome to complete: e.g. hours saved per week, invoices generated, number of users.</span>",
+
+    "c2.context": "<span class=\"todo\">To complete: what d-votion does, who uses the tool.</span>",
+    "c2.stake": "<p>Manage scheduling, a duplicate-free supplier base and payroll in a single app.</p><p><span class=\"todo\">To specify: how it was handled before.</span></p>",
+    "c2.approach": "<ul><li>Built three modules on Bubble: scheduling, supplier deduplication, payroll.</li><li><span class=\"todo\">To complete: deduplication logic, payroll rules, exact role.</span></li></ul>",
+    "c2.result": "<span class=\"todo\">Measurable outcome to complete: e.g. duplicates removed, payroll preparation time.</span>",
+
+    "c3.context": "<span class=\"todo\">To complete: client name (if approved), industry, purpose of the app.</span>",
+    "c3.stake": "<span class=\"todo\">To complete: what the app had to enable.</span>",
+    "c3.approach": "<ul><li>Front-end development in Vue / Nuxt, paired with another developer.</li><li><span class=\"todo\">To complete: scope (pages, components, integrations), how the pair worked, code reviews.</span></li></ul>",
+    "c3.result": "<span class=\"todo\">Outcome to complete: launch, usage, client feedback.</span>",
+
+    "c4.context": "Over 10 WordPress sites delivered to real clients: cultural organisations, a European project, independent professionals.",
+    "c4.stake": "Professional, well-ranked websites that clients can run themselves, with long-term support when needed.",
+    "c4.approach": "<ul><li><strong>Le Cercle Enchanté</strong>, annual festival: partial redesign, maintenance and updates for every edition, Instagram management. <span class=\"todo\">link + screenshot</span></li><li><strong>The Well</strong>, European organisation: in charge of the whole site (management, new features, updates), with a remote international team, entirely in English. <span class=\"todo\">link + screenshot</span></li><li><strong>Hélène's website</strong>: custom site, from requirements to go-live. Content structure, SEO, development, client handover. <span class=\"todo\">link + screenshot</span></li><li><strong>Marie's website</strong>: took over an ongoing project and built a whole section of the site. <span class=\"todo\">link + screenshot</span></li></ul>",
+    "c4.result": "<span class=\"todo\">Measurable outcome to complete: e.g. traffic, Google rankings, PageSpeed score, length of collaborations.</span>",
+
+    "c5.context": "<span class=\"todo\">To specify: for which client or project, publishing volume.</span>",
+    "c5.stake": "Remove manual posting on Instagram, starting from content prepared and approved in Notion.",
+    "c5.approach": "<ul><li>Designed a Make scenario: reads ready content in Notion, publishes to Instagram.</li><li><span class=\"todo\">To complete: trigger, error handling, status updated in Notion.</span></li></ul>",
+    "c5.result": "<span class=\"todo\">Measurable outcome to complete: e.g. time saved per week, posts published automatically.</span>",
+
+    "c6.context": "Since 2024, freelance development and product building for Atelier Digital and Nocode Focus.",
+    "c6.stake": "Ship production-ready products for these agencies' clients, autonomously, from development to support.",
+    "c6.approach": "<ul><li><strong>Nocode Focus, Conselia Patrimoine</strong> (wealth management advisory firm): built the website, supported the client, integrated her feedback, provided support and set up hosting on Vercel.</li><li><strong>Atelier Digital</strong>: <span class=\"todo\">To complete: projects, deliverables, stack.</span></li><li><span class=\"todo\">To complete: other Nocode Focus deliverables.</span></li></ul>",
+    "c6.result": "<span class=\"todo\">Outcome to complete: sites and apps delivered, client feedback, length of collaborations.</span>",
+
+    "stack.title": "The right tool for each need",
+    "stack.lead": "My skills, grouped by what they let you do.",
+    "st1.t": "Front-end", "st1.p": "Fast, responsive interfaces",
+    "st2.t": "CMS", "st2.p": "Sites you manage on your own", "st2.c": "10+ sites delivered",
+    "st3.t": "No-code / low-code", "st3.p": "Business apps, shipped fast",
+    "st4.t": "Automation", "st4.p": "Your tools, connected",
+    "st5.t": "AI-assisted development", "st5.p": "Ship faster, checking every line",
+    "st6.t": "SEO and content", "st6.p": "Get found, get read", "st6.c1": "Technical SEO", "st6.c2": "Web copywriting",
+    "st7.t": "Design and tools", "st7.p": "Visuals and advanced office suites",
+    "st8.t": "Project management", "st8.p": "From need to delivery", "st8.c1": "Scoping", "st8.c2": "Specifications", "st8.c3": "Planning", "st8.c4": "Acceptance testing",
+
+    "path.title": "A background built around delivery",
+    "t1.w": "Since 2024",
+    "t1.t": "Freelance developer and product builder",
+    "t1.p": "Projects for Atelier Digital, Nocode Focus and direct clients: websites, no-code apps and automations, from scoping to post-launch support.",
+    "t2.t": "Front-End Web Development training and work-study, La Bastide",
+    "t2.p": "Several Bubble projects, including a challenge-based journey app for a client company, owned end to end: scoping, management, development and deployment, working directly with the client.",
+    "t3.w": "8 years",
+    "t3.t": "Full digital management of my own organisation",
+    "t3.p": "Website, SEO, newsletters, automations: I know the client's constraints from the inside.",
+    "t4.w": "Master's degree",
+    "t4.t": "Applied Foreign Languages English-German, International Communication, Lyon 3",
+    "t4.p": "An asset for international projects and teams. I already work daily in English with a European team.",
+    "langs.label": "Languages",
+    "langs.fr": "French, native",
+    "langs.en": "English, professional fluency",
+    "langs.de": "German <span class=\"todo\">level to specify</span>",
+
+    "contact.title": "A project, a role? Let's talk.",
+    "contact.lead": "Tell me what you want to build, and I'll tell you how I would approach it.",
+    "contact.a1": "Available now",
+    "contact.a2": "Permanent role or freelance projects",
+    "contact.a3": "Based in Toulouse, mobile across France, remote friendly",
+    "footer.role": "Web &amp; No-Code Developer, Digital Project Manager",
+    "footer.top": "Back to top ↑",
+
+    "todo.photo": "Photo to provide (square, 400 × 400 px, WebP)",
+    "todo.shot": "Screenshot to provide",
+    "todo.shots": "Screenshots to provide",
+    "todo.scenario": "Scenario screenshot to provide",
+    "todo.validate": "To validate",
+    "todo.dvotion": "Project to validate before publishing (client approval, scope).",
+    "todo.nuxt": "Client approval needed to mention their name.",
+    "todo.link": "<span class=\"todo\">Link to complete</span>",
+    "todo.linkConselia": "<span class=\"todo\">Conselia Patrimoine link to complete</span>",
+    "todo.email": "email address to complete",
+    "todo.linkedin": "LinkedIn link to complete",
+    "todo.github": "GitHub link to complete"
+  };
+
+  var root = document.documentElement;
+  var metaDesc = document.querySelector('meta[name="description"]');
+  var langBtn = document.getElementById("lang-btn");
+  var textNodes = document.querySelectorAll("[data-i18n]");
+  var attrNodes = document.querySelectorAll("[data-i18n-attr]");
+
+  // Mémorise le français d'origine pour pouvoir revenir en arrière
+  var FR = { "meta.title": document.title, "meta.desc": metaDesc.content };
+  textNodes.forEach(function (el) {
+    var k = el.getAttribute("data-i18n");
+    if (!(k in FR)) FR[k] = el.innerHTML;
+  });
+  attrNodes.forEach(function (el) {
+    el.getAttribute("data-i18n-attr").split(";").forEach(function (pair) {
+      var p = pair.split(":"), k = p[1];
+      if (!(k in FR)) FR[k] = el.getAttribute(p[0]);
+    });
+  });
+
+  function setLang(lang) {
+    var dict = lang === "en" ? EN : FR;
+    textNodes.forEach(function (el) {
+      var v = dict[el.getAttribute("data-i18n")];
+      if (v != null) el.innerHTML = v;
+    });
+    attrNodes.forEach(function (el) {
+      el.getAttribute("data-i18n-attr").split(";").forEach(function (pair) {
+        var p = pair.split(":"), v = dict[p[1]];
+        if (v != null) el.setAttribute(p[0], v);
+      });
+    });
+    document.title = dict["meta.title"];
+    metaDesc.content = dict["meta.desc"];
+    root.lang = lang;
+    langBtn.textContent = lang === "en" ? "FR" : "EN";
+    langBtn.setAttribute("aria-label", lang === "en" ? "Passer en français" : "Switch to English");
+    try { localStorage.setItem("jc-lang", lang); } catch (e) {}
+  }
+
+  var saved = null;
+  try { saved = localStorage.getItem("jc-lang"); } catch (e) {}
+  if (saved === "en") setLang("en");
+  langBtn.addEventListener("click", function () { setLang(root.lang === "en" ? "fr" : "en"); });
+
+  /* ---------- Menu mobile ---------- */
+  var nav = document.getElementById("nav");
+  var menuBtn = document.getElementById("menu-btn");
+  function closeMenu() { nav.dataset.open = "false"; menuBtn.setAttribute("aria-expanded", "false"); }
+  menuBtn.addEventListener("click", function () {
+    var open = nav.dataset.open !== "true";
+    nav.dataset.open = String(open);
+    menuBtn.setAttribute("aria-expanded", String(open));
+  });
+  nav.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(); });
+
+  /* ---------- Header au scroll ---------- */
+  var header = document.querySelector(".site-header");
+  function onScroll() { header.classList.toggle("scrolled", window.scrollY > 8); }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  /* ---------- Études de cas ---------- */
+  document.querySelectorAll("[data-case]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var d = document.getElementById(btn.getAttribute("data-case"));
+      if (d && typeof d.showModal === "function") d.showModal();
+    });
+  });
+  document.querySelectorAll("dialog.case").forEach(function (d) {
+    d.addEventListener("click", function (e) {
+      if (e.target === d || e.target.closest("[data-close]")) d.close();
+    });
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Rappel pour la mise en ligne
+  var left = document.querySelectorAll(".todo").length;
+  if (left) console.info(left + " emplacement(s) encore à compléter (surlignés en jaune).");
 })();
 </script>
 </body>
