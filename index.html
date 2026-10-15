@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Book Jess Choby</title>
+<style>
+:root{--bg:#fbf8f6;--surface:#fff;--ink:#22202b;--muted:#6a6475;--line:#eadfdb;--accent:#c2416b;--accent-soft:#fbe8ee;--mark:#2f8f83;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171419;--surface:#211d24;--ink:#f1ecf2;--muted:#b3aab8;--line:#352e39;--accent:#f07aa0;--accent-soft:#3a2230;--mark:#5cc7b9;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#171419;--surface:#211d24;--ink:#f1ecf2;--muted:#b3aab8;--line:#352e39;--accent:#f07aa0;--accent-soft:#3a2230;--mark:#5cc7b9;color-scheme:dark}
+*{box-sizing:border-box}
+html[data-lang="fr"] [data-l="en"],html[data-lang="en"] [data-l="fr"]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:24px 16px 80px;display:flex;flex-direction:column;gap:64px}
+a{color:var(--accent)}
+.topbar{display:flex;justify-content:flex-end}
+.langbtn{font:inherit;font-size:.85rem;font-weight:600;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.langbtn:hover{border-color:var(--accent);color:var(--accent)}
+.eyebrow{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);line-height:1.05;margin:6px 0 10px;letter-spacing:-.02em}
+h2{font-size:1.6rem;margin:4px 0 0;letter-spacing:-.01em}
+h3{margin:0;font-size:1.08rem}
+.role{font-size:1.15rem;font-weight:600;color:var(--accent);margin:0}
+.pitch{max-width:44rem;color:var(--muted);font-size:1.05rem}
+.pitch mark{background:var(--accent-soft);color:var(--ink);padding:0 3px;border-radius:3px}
+.hero{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:32px;align-items:end}
+@media (max-width:760px){.hero{grid-template-columns:1fr}}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;font-size:.93rem}
+.contact .lbl{display:inline-block;width:92px;color:var(--muted)}
+.todo{color:var(--muted);font-style:italic}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px}
+.fact b{display:block;font-size:1.9rem;color:var(--accent);line-height:1.1}
+.fact span{color:var(--muted);font-size:.92rem}
+.sechead{display:flex;flex-direction:column;gap:6px;margin-bottom:22px;max-width:44rem}
+.sechead p{margin:0;color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.col{border-top:3px solid var(--accent);padding-top:12px}
+.col p{margin:8px 0 0;color:var(--muted)}
+.col ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
+.col li{margin:4px 0}
+.cases{display:flex;flex-direction:column;gap:16px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;display:grid;grid-template-columns:200px minmax(0,1fr);gap:20px}
+@media (max-width:700px){.case{grid-template-columns:1fr}}
+.case .side{display:flex;flex-direction:column;gap:4px}
+.case .client{font-weight:700;font-size:1.05rem}
+.case .when,.case .post{color:var(--muted);font-size:.9rem}
+.tag{display:inline-block;font-size:.72rem;padding:2px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent);margin:4px 4px 0 0}
+.case p{margin:6px 0 0;color:var(--muted)}
+.case p b{color:var(--ink);font-weight:600}
+.case .res{color:var(--ink);font-weight:600}
+.case.feat{border-color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 10px;font-size:.85rem}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px}
+.panel ul{margin:0;padding-left:18px;color:var(--muted);columns:2;column-gap:28px}
+.panel li{margin:0 0 8px;break-inside:avoid}
+@media (max-width:700px){.panel ul{columns:1}}
+.timeline{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;border-left:2px solid var(--line);padding-left:18px}
+.timeline li{position:relative}
+.timeline li::before{content:"";position:absolute;left:-25px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.timeline .y{font-weight:700;color:var(--accent);margin-right:8px}
+.timeline span.t{color:var(--muted)}
+.end{background:var(--accent);color:#fff;border-radius:18px;padding:28px 24px;display:flex;flex-direction:column;gap:10px}
+.end h2{color:#fff}.end a{color:#fff}.end p{margin:0}
+.note{font-size:.85rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="topbar"><button class="langbtn" id="langbtn" type="button" aria-label="Changer de langue / Switch language">EN</button></div>
+
+<header class="hero">
+  <div>
+    <span class="eyebrow" data-l="fr">Book · Toulouse</span>
+    <span class="eyebrow" data-l="en">Portfolio · Toulouse, France</span>
+    <h1>Jess Choby</h1>
+    <p class="role" data-l="fr">Webmaster · Développeuse web · No-code et IA</p>
+    <p class="role" data-l="en">Webmaster · Web developer · No-code and AI</p>
+    <p class="pitch" data-l="fr">Je conçois, je développe et je fais vivre des outils web pour des structures qui n'ont pas d'équipe tech : <mark>sites, espaces membres, outils internes, automatisations et communication</mark>. Formée au développement web, je produis aujourd'hui avec le no-code et l'IA. Enseignante depuis dix ans, j'anime des groupes de 5 à 50 personnes et je travaille couramment en anglais : je sais expliquer les outils aussi bien que les construire.</p>
+    <p class="pitch" data-l="en">I design, build and run web tools for organisations that have no tech team: <mark>websites, member areas, internal tools, automations and communication</mark>. Trained in web development, I now build with no-code and AI tools. A teacher for ten years, I lead groups of 5 to 50 people and work fluently in English: I can explain tools as well as I can build them.</p>
+  </div>
+  <div class="contact">
+    <div><span class="lbl">Email</span><span class="todo" data-l="fr">à compléter</span><span class="todo" data-l="en">to be added</span></div>
+    <div><span class="lbl">LinkedIn</span><span class="todo" data-l="fr">à compléter</span><span class="todo" data-l="en">to be added</span></div>
+    <div><span class="lbl">GitHub</span><span class="todo" data-l="fr">à compléter</span><span class="todo" data-l="en">to be added</span></div>
+    <div><span class="lbl" data-l="fr">Localisation</span><span class="lbl" data-l="en">Location</span><span data-l="fr">Toulouse, présentiel ou distanciel</span><span data-l="en">Toulouse, on site or remote</span></div>
+    <div><span class="lbl" data-l="fr">Langues</span><span class="lbl" data-l="en">Languages</span><span data-l="fr">Français, anglais professionnel courant, bases d'espagnol et d'allemand</span><span data-l="en">French, fluent professional English, basic Spanish and German</span></div>
+  </div>
+</header>
+
+<section class="facts" aria-label="En bref">
+  <div class="fact"><b>2020</b><span data-l="fr">début de mon parcours web, du code au no-code puis à l'IA</span><span data-l="en">start of my web journey, from code to no-code to AI</span></div>
+  <div class="fact"><b>3</b><span data-l="fr">sites dont je suis responsable au quotidien, dont un entièrement en anglais</span><span data-l="en">websites I run day to day, one of them fully in English</span></div>
+  <div class="fact"><b>8</b><span data-l="fr">sites, applications et outils réalisés pour des clients, des associations et ma propre activité</span><span data-l="en">websites, apps and tools built for clients, non-profits and my own business</span></div>
+  <div class="fact"><b>10 <span data-l="fr">ans</span><span data-l="en">years</span></b><span data-l="fr">de pédagogie, en individuel et en ateliers de 5 à 50 personnes</span><span data-l="en">of teaching, one to one and in workshops of 5 to 50 people</span></div>
+</section>
+
+<section>
+  <div class="sechead">
+    <span class="eyebrow" data-l="fr">Ce que j'apporte</span><span class="eyebrow" data-l="en">What I bring</span>
+    <h2 data-l="fr">Une seule interlocutrice pour tout le numérique</h2><h2 data-l="en">One point of contact for everything digital</h2>
+  </div>
+  <div class="cols">
+    <div class="col">
+      <h3 data-l="fr">Créer</h3><h3 data-l="en">Build</h3>
+      <ul data-l="fr"><li>Sites vitrines, sites WordPress, sites sur mesure</li><li>Espaces membres et petites applications web</li><li>Outils de gestion sur mesure, en no-code ou en code</li></ul>
+      <ul data-l="en"><li>Showcase sites, WordPress and custom websites</li><li>Member areas and small web applications</li><li>Custom management tools, no-code or code</li></ul>
+    </div>
+    <div class="col">
+      <h3 data-l="fr">Faire vivre</h3><h3 data-l="en">Run</h3>
+      <ul data-l="fr"><li>Maintenance, mises à jour, refontes</li><li>Hébergement et mise en production</li><li>Communication et réseaux sociaux</li></ul>
+      <ul data-l="en"><li>Maintenance, updates, redesigns</li><li>Hosting and deployment</li><li>Communication and social media</li></ul>
+    </div>
+    <div class="col">
+      <h3 data-l="fr">Automatiser</h3><h3 data-l="en">Automate</h3>
+      <ul data-l="fr"><li>Développement assisté par IA</li><li>Automatisation de tâches et de processus</li><li>Outils internes créés à la demande</li></ul>
+      <ul data-l="en"><li>AI-assisted development</li><li>Task and process automation</li><li>Internal tools built on demand</li></ul>
+    </div>
+    <div class="col">
+      <h3 data-l="fr">Accompagner</h3><h3 data-l="en">Support</h3>
+      <ul data-l="fr"><li>Recueil des besoins et relation client</li><li>Former les utilisateurs, seuls ou en groupe</li><li>Travailler en anglais avec des équipes européennes</li></ul>
+      <ul data-l="en"><li>Needs analysis and client relations</li><li>Training users, one to one or in groups</li><li>Working in English with European teams</li></ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="sechead">
+    <span class="eyebrow" data-l="fr">Réalisations</span><span class="eyebrow" data-l="en">Work</span>
+    <h2 data-l="fr">Des projets réels, en ligne et utilisés</h2><h2 data-l="en">Real projects, live and in use</h2>
+    <p data-l="fr">Pour des clients, des associations et ma propre activité. À chaque fois, j'ai pris en charge le projet de bout en bout.</p>
+    <p data-l="en">For clients, non-profits and my own business. Each time, I handled the project from start to finish.</p>
+  </div>
+  <div class="cases">
+
+    <article class="case feat">
+      <div class="side">
+        <span class="client"><a href="https://www.donnerdelavoix.fr/" target="_blank" rel="noopener">Donner de la voix</a></span>
+        <span class="post" data-l="fr">Conception, design et développement</span><span class="post" data-l="en">Design and development</span>
+        <span class="when" data-l="fr">Mon activité · en cours</span><span class="when" data-l="en">My own business · ongoing</span>
+        <div><span class="tag" data-l="fr">Application web</span><span class="tag" data-l="en">Web app</span><span class="tag" data-l="fr">Espace élève</span><span class="tag" data-l="en">Student area</span><span class="tag">LMS</span><span class="tag" data-l="fr">Charte graphique</span><span class="tag" data-l="en">Visual identity</span></div>
+      </div>
+      <div>
+        <h3 data-l="fr">Un site et une plateforme de formation pour mon activité</h3>
+        <h3 data-l="en">A website and a learning platform for my business</h3>
+        <p data-l="fr"><b>Le besoin :</b> présenter mon activité d'enseignement du chant improvisé et gérer au quotidien mes élèves, mes contenus et mes parcours.</p>
+        <p data-l="en"><b>The need:</b> present my improvised singing teaching business and manage my students, content and learning paths day to day.</p>
+        <p data-l="fr"><b>Ce que j'ai fait :</b> j'ai conçu l'identité visuelle et la charte graphique, puis développé un site dynamique avec un espace élève. Cette petite application web gère les élèves, les contenus de formation, les parcours et les exercices.</p>
+        <p data-l="en"><b>What I did:</b> I designed the visual identity, then built a dynamic website with a student area. This small web app manages students, course content, learning paths and exercises.</p>
+        <p data-l="fr"><b>Avant :</b> j'avais construit sur Coda un outil de gestion complet pour piloter toute l'activité : élèves, cours, ressources pédagogiques, administratif et comptabilité. Quand le besoin a grandi, je suis passée du no-code au code.</p>
+        <p data-l="en"><b>Before that:</b> I had built a complete management tool on Coda to run the whole business: students, classes, teaching resources, admin and accounting. When the need grew, I moved from no-code to code.</p>
+        <p class="res" data-l="fr">Je suis à la fois la cliente, la designer, la développeuse et l'utilisatrice : je sais ce qu'un outil doit faire au quotidien.</p>
+        <p class="res" data-l="en">I am the client, the designer, the developer and the user: I know what a tool needs to do every day.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="side">
+        <span class="client"><a href="https://www.labastide.io/" target="_blank" rel="noopener">La Bastide</a></span>
+        <span class="post" data-l="fr">Développeuse no-code en alternance</span><span class="post" data-l="en">No-code developer, work-study</span>
+        <span class="when" data-l="fr">1 an</span><span class="when" data-l="en">1 year</span>
+        <div><span class="tag">Bubble</span><span class="tag" data-l="fr">Gestion de projet</span><span class="tag" data-l="en">Project management</span><span class="tag" data-l="fr">ESS</span><span class="tag" data-l="en">Social economy</span></div>
+      </div>
+      <div>
+        <h3 data-l="fr">Une application de parcours à défis, pilotée de bout en bout</h3>
+        <h3 data-l="en">A challenge-based journey app, managed end to end</h3>
+        <p data-l="fr"><b>Le contexte :</b> La Bastide développe des solutions no-code sur mesure pour des structures de l'économie sociale et solidaire. J'y ai développé plusieurs projets sur Bubble.</p>
+        <p data-l="en"><b>Context:</b> La Bastide builds custom no-code solutions for social and solidarity economy organisations. I developed several projects on Bubble there.</p>
+        <p data-l="fr"><b>Ce que j'ai fait :</b> pour une entreprise cliente qui propose aux entreprises des parcours avec des défis par étapes, j'ai eu la responsabilité complète de l'application : cadrage, pilotage, développement et déploiement, en lien direct avec le client.</p>
+        <p data-l="en"><b>What I did:</b> for a client offering companies step-by-step challenge journeys, I was fully in charge of the app: scoping, project management, development and deployment, working directly with the client.</p>
+        <p class="res" data-l="fr">Un projet client confié en autonomie dès l'alternance, avec la pleine confiance du client.</p>
+        <p class="res" data-l="en">A client project entrusted to me on my own during my work-study, with the client's full trust.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="side">
+        <span class="client"><a href="https://conseliapatrimoine.com/" target="_blank" rel="noopener">Conselia Patrimoine</a></span>
+        <span class="post" data-l="fr">Développeuse et relation client</span><span class="post" data-l="en">Developer and client contact</span>
+        <span class="when" data-l="fr">Avec NoCode Focus</span><span class="when" data-l="en">With NoCode Focus</span>
+        <div><span class="tag" data-l="fr">Site vitrine</span><span class="tag" data-l="en">Showcase site</span><span class="tag">HTML / CSS / JS</span><span class="tag">Vercel</span></div>
+      </div>
+      <div>
+        <h3 data-l="fr">Le site d'un cabinet de conseil en gestion de patrimoine</h3>
+        <h3 data-l="en">A website for a wealth management advisory firm</h3>
+        <p data-l="fr"><b>Le besoin :</b> un site professionnel qui inspire confiance, dans un secteur exigeant.</p>
+        <p data-l="en"><b>The need:</b> a professional website that inspires trust, in a demanding sector.</p>
+        <p data-l="fr"><b>Ce que j'ai fait :</b> en collaboration avec NoCode Focus, en tant que développeuse indépendante, j'ai développé le site, accompagné la cliente, intégré ses retours, assuré le support et mis en place l'hébergement sur Vercel.</p>
+        <p data-l="en"><b>What I did:</b> working with NoCode Focus as an independent developer, I built the site, guided the client, handled her feedback, provided support and set up hosting on Vercel.</p>
+        <p class="res" data-l="fr">Une prise en charge complète, de la production au support après la mise en ligne.</p>
+        <p class="res" data-l="en">Full ownership, from development to post-launch support.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="side">
+        <span class="client"><a href="https://lecercleenchante.com/" target="_blank" rel="noopener">Le Cercle Enchanté</a></span>
+        <span class="post" data-l="fr">Webmaster et responsable communication</span><span class="post" data-l="en">Webmaster and communications lead</span>
+        <span class="when" data-l="fr">En cours</span><span class="when" data-l="en">Ongoing</span>
+        <div><span class="tag">WordPress</span><span class="tag" data-l="fr">Réseaux sociaux</span><span class="tag" data-l="en">Social media</span><span class="tag" data-l="fr">Refonte</span><span class="tag" data-l="en">Redesign</span></div>
+      </div>
+      <div>
+        <h3 data-l="fr">Le site et la communication d'un festival</h3>
+        <h3 data-l="en">Website and communication for a festival</h3>
+        <p data-l="fr"><b>Le contexte :</b> un festival de chant improvisé qui revient chaque année, porté par une structure sans équipe tech.</p>
+        <p data-l="en"><b>Context:</b> an annual improvised singing festival, run by an organisation with no tech team.</p>
+        <p data-l="fr"><b>Ce que j'ai fait :</b> je suis la référente numérique de la structure. J'ai refondu en partie le site WordPress, j'en assure la maintenance et je le mets à jour à chaque nouvelle édition. Je gère aussi la communication : animation d'Instagram, création et publication des contenus. J'étudie actuellement une migration vers Next.js pour rendre le site plus simple et plus rapide à maintenir.</p>
+        <p data-l="en"><b>What I did:</b> I am the organisation's go-to digital person. I partly redesigned the WordPress site, maintain it and update it for every new edition. I also run communication: Instagram, content creation and publishing. I am currently assessing a move to Next.js to make the site simpler and faster to maintain.</p>
+        <p class="res" data-l="fr">Un rôle durable, sur plusieurs éditions, qui réunit la technique et la communication.</p>
+        <p class="res" data-l="en">A long-term role across several editions, combining tech and communication.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="side">
+        <span class="client"><a href="https://thewellvocal.com/" target="_blank" rel="noopener">The Well</a></span>
+        <span class="post">Webmaster</span>
+        <span class="when" data-l="fr">Mission rémunérée en cours</span><span class="when" data-l="en">Ongoing paid role</span>
+        <div><span class="tag">WordPress</span><span class="tag" data-l="fr">Anglais</span><span class="tag" data-l="en">English</span><span class="tag" data-l="fr">International</span><span class="tag" data-l="en">International</span></div>
+      </div>
+      <div>
+        <h3 data-l="fr">Webmaster d'une structure européenne</h3>
+        <h3 data-l="en">Webmaster for a European organisation</h3>
+        <p data-l="fr"><b>Le contexte :</b> un projet à l'échelle européenne, sans interlocuteur francophone.</p>
+        <p data-l="en"><b>Context:</b> a European-scale project with an international team.</p>
+        <p data-l="fr"><b>Ce que je fais :</b> je suis responsable de l'ensemble du site WordPress : gestion, évolutions, mises à jour de contenu et suivi au quotidien, en lien avec une équipe internationale à distance.</p>
+        <p data-l="en"><b>What I do:</b> I am in charge of the whole WordPress site: administration, improvements, content updates and day-to-day follow-up, working remotely with an international team.</p>
+        <p class="res" data-l="fr">Toute la mission se déroule en anglais.</p>
+        <p class="res" data-l="en">The entire role is carried out in English.</p>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="side">
+        <span class="client" data-l="fr">Autres sites</span><span class="client" data-l="en">Other websites</span>
+        <span class="post" data-l="fr">Conception et développement</span><span class="post" data-l="en">Design and development</span>
+        <div><span class="tag">WordPress</span><span class="tag">SEO</span></div>
+      </div>
+      <div>
+        <h3 data-l="fr">Sites sur mesure pour des indépendantes</h3>
+        <h3 data-l="en">Custom websites for independent professionals</h3>
+        <p data-l="fr"><b>Site d'Hélène, chant improvisé :</b> site WordPress sur mesure, du recueil du besoin à la mise en ligne : structuration du site et des contenus, référencement naturel, développement et accompagnement de la cliente.</p>
+        <p data-l="en"><b>Hélène's website, improvised singing:</b> a custom WordPress site, from needs analysis to launch: site and content structure, SEO, development and client support.</p>
+        <p data-l="fr"><b>Site de Marie :</b> reprise d'un projet en cours et développement de toute une partie de son site WordPress.</p>
+        <p data-l="en"><b>Marie's website:</b> took over a project in progress and built a whole section of her WordPress site.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section>
+  <div class="sechead">
+    <span class="eyebrow" data-l="fr">IA et automatisation</span><span class="eyebrow" data-l="en">AI and automation</span>
+    <h2 data-l="fr">Produire plus vite, en sachant ce que je fais</h2><h2 data-l="en">Building faster, knowing what I'm doing</h2>
+    <p data-l="fr">Je suis de près l'évolution des outils d'IA et je les utilise au quotidien. Développer avec l'IA, c'est savoir formuler le besoin, découper le travail, vérifier ce qui est produit, corriger, déployer et maintenir. Ma base en code et mon expérience du no-code sont ce qui me permet de le faire correctement.</p>
+    <p data-l="en">I follow AI tools closely and use them every day. Building with AI means framing the need, breaking down the work, checking what is produced, fixing it, deploying and maintaining it. My coding background and no-code experience are what let me do this properly.</p>
+  </div>
+  <div class="cols">
+    <div class="col"><h3 data-l="fr">Développement assisté par IA</h3><h3 data-l="en">AI-assisted development</h3><p data-l="fr">Production de code avec Claude Code et Cursor, prototypage rapide.</p><p data-l="en">Building code with Claude Code and Cursor, rapid prototyping.</p></div>
+    <div class="col"><h3 data-l="fr">Automatisation</h3><h3 data-l="en">Automation</h3><p data-l="fr">Mise en place de processus automatisés et d'outils internes créés à la demande.</p><p data-l="en">Setting up automated processes and internal tools built on demand.</p></div>
+    <div class="col"><h3 data-l="fr">Mise en production</h3><h3 data-l="en">Deployment</h3><p data-l="fr">Hébergement et déploiement, notamment sur Vercel.</p><p data-l="en">Hosting and deployment, notably on Vercel.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="sechead">
+    <span class="eyebrow" data-l="fr">Profil hybride</span><span class="eyebrow" data-l="en">Hybrid profile</span>
+    <h2 data-l="fr">Construire les outils, et aider les gens à s'en servir</h2><h2 data-l="en">Building tools, and helping people use them</h2>
+    <p data-l="fr">En parallèle de la tech, j'enseigne le chant improvisé depuis dix ans. Ce métier m'a donné trois compétences que j'utilise dans tous mes projets.</p>
+    <p data-l="en">Alongside tech, I have taught improvised singing for ten years. This work gave me three skills I use in every project.</p>
+  </div>
+  <div class="cols">
+    <div class="col">
+      <h3 data-l="fr">Pédagogie et structuration</h3><h3 data-l="en">Teaching and structuring</h3>
+      <p data-l="fr">Je sais découper un système en règles logiques et en étapes pour le rendre accessible à quelqu'un qui part de zéro. Je conçois mes propres parcours de formation. La même compétence me sert à comprendre un besoin et à recueillir ce que les gens attendent vraiment.</p>
+      <p data-l="en">I can break a system down into logical rules and steps so a complete beginner can follow. I design my own learning paths. The same skill helps me understand a need and find out what people really expect.</p>
+    </div>
+    <div class="col">
+      <h3 data-l="fr">Animation de groupes</h3><h3 data-l="en">Group facilitation</h3>
+      <p data-l="fr">J'anime depuis plusieurs années des ateliers collectifs de 5 à 50 personnes : faire participer tout le monde, transmettre en groupe, faire construire quelque chose ensemble.</p>
+      <p data-l="en">For several years I have run group workshops of 5 to 50 people: getting everyone involved, teaching a group, building something together.</p>
+    </div>
+    <div class="col">
+      <h3 data-l="fr">Langues et international</h3><h3 data-l="en">Languages and international work</h3>
+      <p data-l="fr">Master 2 en langues, anglais professionnel courant, bases d'espagnol et d'allemand. Je travaille déjà au quotidien en anglais avec une équipe européenne.</p>
+      <p data-l="en">Master's degree in languages, fluent professional English, basic Spanish and German. I already work in English every day with a European team.</p>
+    </div>
+  </div>
+  <div class="panel" style="margin-top:20px">
+    <p class="eyebrow" style="margin:0 0 12px" data-l="fr">Concrètement, je peux par exemple</p>
+    <p class="eyebrow" style="margin:0 0 12px" data-l="en">In practice, I can for example</p>
+    <ul data-l="fr">
+      <li>Animer une formation sur un outil pour un groupe de 20 personnes, en français ou en anglais</li>
+      <li>Former une équipe et ses bénévoles à un nouvel outil, et accompagner le changement</li>
+      <li>Animer des ateliers d'initiation à l'IA pour des équipes non techniques</li>
+      <li>Accueillir et former de nouveaux clients chez un éditeur de logiciel : démos, webinaires</li>
+      <li>Assurer le support et le suivi d'une clientèle européenne</li>
+      <li>Animer des ateliers de recueil des besoins avec les futurs utilisateurs</li>
+      <li>Faire le lien entre développeurs et équipes métier, en langage clair</li>
+      <li>Rédiger des tutoriels, une documentation ou une base de connaissances</li>
+      <li>Gérer un site multilingue et coordonner des partenaires de plusieurs pays</li>
+    </ul>
+    <ul data-l="en">
+      <li>Run a tool training session for a group of 20, in French or English</li>
+      <li>Train a team and its volunteers on a new tool, and support the change</li>
+      <li>Run introductory AI workshops for non-technical teams</li>
+      <li>Onboard and train new customers for a software company: demos, webinars</li>
+      <li>Provide support and follow-up for European customers</li>
+      <li>Run needs-gathering workshops with future users</li>
+      <li>Bridge developers and business teams, in plain language</li>
+      <li>Write tutorials, documentation or a knowledge base</li>
+      <li>Manage a multilingual website and coordinate partners across countries</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="sechead">
+    <span class="eyebrow" data-l="fr">Compétences</span><span class="eyebrow" data-l="en">Skills</span>
+    <h2 data-l="fr">Outils et savoir-faire</h2><h2 data-l="en">Tools and know-how</h2>
+  </div>
+  <div class="cols">
+    <div class="col"><h3>Web</h3><div class="chips"><span class="chip">HTML / CSS</span><span class="chip">JavaScript</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">WordPress</span><span class="chip">SEO</span></div></div>
+    <div class="col"><h3 data-l="fr">No-code et IA</h3><h3 data-l="en">No-code and AI</h3><div class="chips"><span class="chip">Bubble</span><span class="chip">Coda</span><span class="chip">Claude Code</span><span class="chip">Cursor</span><span class="chip" data-l="fr">Automatisations</span><span class="chip" data-l="en">Automations</span><span class="chip">Vercel</span></div></div>
+    <div class="col"><h3 data-l="fr">Projet et communication</h3><h3 data-l="en">Projects and communication</h3><div class="chips"><span class="chip" data-l="fr">Recueil des besoins</span><span class="chip" data-l="en">Needs analysis</span><span class="chip" data-l="fr">Gestion de projet</span><span class="chip" data-l="en">Project management</span><span class="chip" data-l="fr">Relation client</span><span class="chip" data-l="en">Client relations</span><span class="chip" data-l="fr">Réseaux sociaux</span><span class="chip" data-l="en">Social media</span><span class="chip" data-l="fr">Identité visuelle</span><span class="chip" data-l="en">Visual identity</span></div></div>
+    <div class="col"><h3 data-l="fr">Transmission</h3><h3 data-l="en">Teaching</h3><div class="chips"><span class="chip" data-l="fr">Pédagogie</span><span class="chip" data-l="en">Teaching</span><span class="chip" data-l="fr">Formation</span><span class="chip" data-l="en">Training</span><span class="chip" data-l="fr">Animation d'ateliers</span><span class="chip" data-l="en">Workshop facilitation</span><span class="chip" data-l="fr">Anglais courant</span><span class="chip" data-l="en">Fluent English</span><span class="chip" data-l="fr">Espagnol, allemand (bases)</span><span class="chip" data-l="en">Spanish, German (basic)</span></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sechead">
+    <span class="eyebrow" data-l="fr">Parcours</span><span class="eyebrow" data-l="en">Background</span>
+    <h2 data-l="fr">Du code au no-code, puis à l'IA</h2><h2 data-l="en">From code to no-code, then AI</h2>
+  </div>
+  <ol class="timeline">
+    <li><span class="y">2020</span><span class="t" data-l="fr">Je commence à me former au développement web en autonomie : HTML, CSS, JavaScript, premiers projets personnels.</span><span class="t" data-l="en">I start teaching myself web development: HTML, CSS, JavaScript, first personal projects.</span></li>
+    <li><span class="y">No-code</span><span class="t" data-l="fr">Je découvre Coda et construis l'outil de gestion de mon activité d'enseignement.</span><span class="t" data-l="en">I discover Coda and build the management tool for my teaching business.</span></li>
+    <li><span class="y">Full stack</span><span class="t" data-l="fr">Parcours full stack sur Codecademy : React en front-end, Node.js en back-end, projets en JavaScript et React.</span><span class="t" data-l="en">Full stack track on Codecademy: React front end, Node.js back end, JavaScript and React projects.</span></li>
+    <li><span class="y" data-l="fr">Titre DWWM</span><span class="y" data-l="en">Web developer degree</span><span class="t" data-l="fr">Formation avec Ottho (parcours Bubble) et un an d'alternance chez La Bastide.</span><span class="t" data-l="en">Training with Ottho (Bubble track) and a one-year work-study at La Bastide.</span></li>
+    <li><span class="y" data-l="fr">Aujourd'hui</span><span class="y" data-l="en">Today</span><span class="t" data-l="fr">Indépendante : sites vitrines, petites applications, référente tech de plusieurs structures, développement assisté par IA.</span><span class="t" data-l="en">Freelance: showcase sites, small apps, go-to tech person for several organisations, AI-assisted development.</span></li>
+  </ol>
+  <div class="cols" style="margin-top:28px">
+    <div class="col"><h3 data-l="fr">Titre professionnel Développeuse web et web mobile</h3><h3 data-l="en">Web and Mobile Web Developer (French state-recognised degree)</h3><p class="note" data-l="fr">Titre RNCP de niveau 5, Ottho, en alternance</p><p class="note" data-l="en">Level 5 (EQF), Ottho, work-study</p></div>
+    <div class="col"><h3 data-l="fr">Master 2 en langues</h3><h3 data-l="en">Master's degree in languages</h3><p class="note" data-l="fr">Anglais professionnel courant</p><p class="note" data-l="en">Fluent professional English</p></div>
+    <div class="col"><h3 data-l="fr">Parcours full stack</h3><h3 data-l="en">Full stack track</h3><p class="note">Codecademy · React, Node.js</p></div>
+  </div>
+</section>
+
+<section class="end">
+  <h2 data-l="fr">On en parle ?</h2><h2 data-l="en">Let's talk</h2>
+  <p data-l="fr">Je cherche un poste où je serais la référente web et outils numériques d'une structure : webmaster, chargée de projets numériques, référente outils, onboarding ou formation chez un éditeur de logiciel. Toulouse ou à distance, en français ou en anglais.</p>
+  <p data-l="en">I'm looking for a role as an organisation's go-to person for web and digital tools: webmaster, digital project officer, tools lead, onboarding or training at a software company. Toulouse or remote, in French or English.</p>
+  <p class="todo" style="color:#fff" data-l="fr">Email et LinkedIn à compléter</p>
+  <p class="todo" style="color:#fff" data-l="en">Email and LinkedIn to be added</p>
+</section>
+
+</div>
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('langbtn');
+  function set(l){root.setAttribute('data-lang',l);root.setAttribute('lang',l);btn.textContent=l==='fr'?'EN':'FR';try{localStorage.setItem('jess-lang',l)}catch(e){}}
+  var saved=null;try{saved=localStorage.getItem('jess-lang')}catch(e){}
+  if(saved==='en')set('en');
+  btn.addEventListener('click',function(){set(root.getAttribute('data-lang')==='fr'?'en':'fr')});
+})();
+</script>
+</body>
+</html>
